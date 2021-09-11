@@ -3,7 +3,7 @@ package oop;
 import java.io.File;
 import java.util.Scanner;
 
-public class StudentSignIn extends PrintStudentInfo{
+public class StudentSignIn extends PrintOwnInformation{
     // This function is used for student sign in
     void signIn()
     {
@@ -26,6 +26,8 @@ public class StudentSignIn extends PrintStudentInfo{
                 if(user.equals(userName) && pass.equals(password)) // Checking if the given username and password is valid or not
                 {
                     valid = true;
+                    PrintOwnInformation printOwnInformation = new PrintOwnInformation();
+                    printOwnInformation.ownInfo(user, pass);
                     break;
                 }
             }

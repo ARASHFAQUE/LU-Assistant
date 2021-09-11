@@ -7,7 +7,7 @@ public class StudentSignUp {
     // This function is used for sign up
     void signUp()
     {
-        String userName, password, str;
+        String userName, password, id, str;
         try{
             // This file stores the username and password of newly registered students on this application
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
@@ -17,6 +17,8 @@ public class StudentSignUp {
             userName = input.next();
             System.out.print("Please enter your password: ");
             password = input.next();
+            System.out.print("Please enter your ID: ");
+            id = input.next();
             boolean duplicate = false;
             while (scanner.hasNext())
             {
@@ -30,7 +32,7 @@ public class StudentSignUp {
             }
             if(!duplicate)
             {
-                str = userName + " " + password;
+                str = userName + " " + password + " " + id;
                 PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file1, true)));
                 out.println(str);
                 out.close();
