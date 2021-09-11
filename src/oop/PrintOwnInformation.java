@@ -12,20 +12,16 @@ public class PrintOwnInformation {
             // In this file the username and password of the registered students are stored
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
             Scanner scanner = new Scanner(file1); // Scanner class is called to read the file
-//            Scanner input = new Scanner(System.in);
             boolean valid = false;
-            String id = "";
             while (scanner.hasNext())
             {
                 String user = scanner.next();
                 String pass = scanner.next();
+                String id = scanner.next();
                 if(user.equals(userName) && pass.equals(password)) // Checking if the given username and password is valid or not
                 {
-                    id = scanner.next();
-                    /*PrintStudentInfo printStudentInfo = new PrintStudentInfo();
-                    printStudentInfo.displayOwn(id);*/
                     PrintOwnInformation printOwnInformation = new PrintOwnInformation();
-                    printOwnInformation.displayOwn(id);
+                    printOwnInformation.displayOwn(id, user, pass);
                 }
             }
         }catch (Exception e)
@@ -34,7 +30,7 @@ public class PrintOwnInformation {
         }
     }
 
-    void displayOwn(String id)
+    void displayOwn(String id, String user, String pass)
     {
         String studentID, name, birthDate, section, cgpa, payment, vaccine;
         try {
@@ -93,14 +89,12 @@ public class PrintOwnInformation {
                 System.out.println("CGPA: " + printCgpa);
                 System.out.println("Payment completed?: " + printPayment);
                 System.out.println("Is vaccinated?: " + printVaccine);
-                StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice();
             }
             if(!valid)
             {
                 System.out.println("Information is not added yet! Will be added soon.");
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice();
+                studentChoice.choice(user, pass);
             }
         }catch (FileNotFoundException e)
         {

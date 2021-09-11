@@ -17,24 +17,23 @@ public class StudentSignIn extends PrintOwnInformation{
             userName = input.next();
             System.out.print("Please enter the password: ");
             password = input.next();
-            //System.out.println("Hello");
             boolean valid = false;
             while (scanner.hasNext())
             {
                 String user = scanner.next();
                 String pass = scanner.next();
+                String id = scanner.next();
                 if(user.equals(userName) && pass.equals(password)) // Checking if the given username and password is valid or not
                 {
                     valid = true;
-                    PrintOwnInformation printOwnInformation = new PrintOwnInformation();
-                    printOwnInformation.ownInfo(user, pass);
                     break;
                 }
             }
             if(valid)
             {
+                System.out.println("Signed In Successful.");
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice();
+                studentChoice.choice(userName, password);
             }
             else
             {

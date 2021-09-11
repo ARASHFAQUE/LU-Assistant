@@ -4,18 +4,18 @@ import java.util.Scanner;
 
 public class StudentChoice {
     // After signing in this page occurs which provides students to access information they want
-    void choice()
+    void choice(String user, String pass)
     {
         int choice;
         while(true)
         {
             System.out.println("************* Please choose an option *************");
             System.out.println("1. Your Information");
-            System.out.println("1. Any Student Information");
-            System.out.println("2. Teacher Information");
-            System.out.println("3. Class Routine");
-            System.out.println("4. Bus Schedule");
-            System.out.println("5. Home");
+            System.out.println("2. Any Student Information");
+            System.out.println("3. Teacher Information");
+            System.out.println("4. Class Routine");
+            System.out.println("5. Bus Schedule");
+            System.out.println("6. Home");
 
             System.out.print("Enter any option you like: ");
             Scanner input = new Scanner(System.in);
@@ -23,22 +23,26 @@ public class StudentChoice {
             switch (choice)
             {
                 case 1:
-                    PrintStudentInfo printStudentInfo = new PrintStudentInfo();
-                    printStudentInfo.display();
+                    PrintOwnInformation printOwnInformation = new PrintOwnInformation();
+                    printOwnInformation.ownInfo(user, pass);
                     break;
                 case 2:
+                    PrintStudentInfo printStudentInfo = new PrintStudentInfo();
+                    printStudentInfo.display(user, pass);
+                    break;
+                case 3:
                     StudentSignIn studentSignIn = new StudentSignIn();
                     studentSignIn.signIn();
                     break;
-                case 3:
+                case 4:
                     RoutineBusSchedule routine = new RoutineBusSchedule();
                     routine.routine();
                     break;
-                case 4:
+                case 5:
                     RoutineBusSchedule busSchedule = new RoutineBusSchedule();
                     busSchedule.schedule();
                     break;
-                case 5:
+                case 6:
                     Home home = new Home();
                     home.startOfEverything();
                     break;

@@ -18,6 +18,7 @@ public class UpdateStudentInfo {
             System.out.print("Enter the ID No. of the student you want to update: ");
             Scanner input = new Scanner(System.in);
             String newID = input.next();
+            input.nextLine();
             String updatedID = "", updatedName = "", updatedBirthDate = "", updatedSection = "", updatedCgpa = "", updatedPayment = "", updatedVaccine = "";
             boolean found = false;
             while (scanner.hasNext())
@@ -56,6 +57,7 @@ public class UpdateStudentInfo {
                 System.out.println("2. Birthdate? ");
                 System.out.println("3. Section? ");
                 System.out.println("4. CGPA? ");
+                System.out.println("5. Is payment completed or not? ");
                 System.out.println("5. Is vaccinated or not? ");
 
                 System.out.print("Enter an option: ");
@@ -72,6 +74,7 @@ public class UpdateStudentInfo {
                         System.out.print("Enter the updated birthdate in Day-Month-Year format: ");
                         updatedBirthDate = "";
                         updatedBirthDate = input.next();
+                        break;
                     case 3:
                         System.out.print("Enter the updated section: ");
                         updatedSection = "";

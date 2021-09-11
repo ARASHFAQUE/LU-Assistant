@@ -6,17 +6,18 @@ import java.util.Scanner;
 
 public class PrintStudentInfo {
     // This function is used to print students information
-    void display()
+    void display(String user, String pass)
     {
-        String studentID, name, section, cgpa, vaccine, id;
+        String studentID, name, birthDate, section, cgpa, payment, vaccine;
         try {
             // In this file the information of enrolled students at Leading University are stored
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
             Scanner input = new Scanner(System.in);
             System.out.print("Please enter the student ID: ");
-            id = input.next();
-            String printID = "", printName = "", printSection = "", printCgpa = "", printVaccine = "";
+            String id = input.next();
+            input.nextLine();
+            String printID = "", printName = "", printBirthDate = "", printSection = "", printCgpa = "", printPayment = "", printVaccine = "";
             boolean valid = false;
             while (scanner.hasNext())
             {
@@ -30,8 +31,10 @@ public class PrintStudentInfo {
                     printVaccine = "";
                     //System.out.println("Found");
                     name = scanner.next();
+                    birthDate = scanner.next();
                     section = scanner.next();
                     cgpa = scanner.next();
+                    payment = scanner.next();
                     vaccine = scanner.next();
                     printID = studentID;
                     printName = name;
@@ -61,12 +64,13 @@ public class PrintStudentInfo {
                 System.out.println("CGPA: " + printCgpa);
                 System.out.println("Is vaccinated?: " + printVaccine);
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice();
+                studentChoice.choice(user, pass);
             }
             if(!valid)
             {
                 System.out.println("ID No. is not correct! Please try again.");
-                display();
+                StudentChoice studentChoice = new StudentChoice();
+                studentChoice.choice(user, pass);
             }
         }catch (FileNotFoundException e)
         {
