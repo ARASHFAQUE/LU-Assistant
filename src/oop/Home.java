@@ -32,14 +32,6 @@ public class Home extends AdminPanel{
                     AdminPanel adminPanel = new AdminPanel();
                     adminPanel.controlServer();
                     break;
-                /*case 1:
-                    AdminPanel adminPanel = new AdminPanel();
-                    adminPanel.controlServer();
-                    break;
-                case 2:
-                    StudentSignIn studentSignIn = new StudentSignIn();
-                    studentSignIn.signIn();
-                    break;*/
             }
         }
     }
