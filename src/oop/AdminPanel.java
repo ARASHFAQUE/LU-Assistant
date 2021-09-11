@@ -65,11 +65,12 @@ public class AdminPanel {
                             updateStudentInfo.updateInfo();*/
                             break;
                         case 5:
-                            AdminPanel adminPanel = new AdminPanel();
-                            adminPanel.controlServer();
+                            RoutineBusSchedule routine = new RoutineBusSchedule();
+                            routine.routine();
                             break;
                         case 6:
-                            //System.out.println("Hello");
+                            RoutineBusSchedule busSchedule = new RoutineBusSchedule();
+                            busSchedule.schedule();
                             break;
                         case 7:
                             Home home = new Home();

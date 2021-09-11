@@ -10,7 +10,8 @@ public class StudentChoice {
         while(true)
         {
             System.out.println("************* Please choose an option *************");
-            System.out.println("1. Student Information");
+            System.out.println("1. Your Information");
+            System.out.println("1. Any Student Information");
             System.out.println("2. Teacher Information");
             System.out.println("3. Class Routine");
             System.out.println("4. Bus Schedule");

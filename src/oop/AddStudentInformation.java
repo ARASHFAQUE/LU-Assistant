@@ -7,7 +7,7 @@ public class AddStudentInformation {
     // This function is used to add information of newly enrolled students at Leading University
     void addInfo() {
         int numberOfStudent;
-        String id, name, section, cgpa, vaccine, str;
+        String id, name, birthDate, section, cgpa, payment, vaccine, str;
         String studentID;
         try {
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
@@ -33,13 +33,17 @@ public class AddStudentInformation {
                 {
                     System.out.print("Name: ");
                     name = input.next();
+                    System.out.print("Birthday in Day-Month-Year format: ");
+                    birthDate = input.next();
                     System.out.print("Section: ");
                     section = input.next();
                     System.out.print("CGPA: ");
                     cgpa = input.next();
+                    System.out.print("Payment Completed?: ");
+                    payment = input.next();
                     System.out.print("Is Vaccinated?: ");
                     vaccine = input.next();
-                    str = id + " " + name + " " + section + " " + cgpa + " " + vaccine;
+                    str = id + " " + name + " " + birthDate + " " + section + " " + cgpa + " " + payment + " " + vaccine;
                     PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file2, true)));
                     out.println(str);
                     out.close();
