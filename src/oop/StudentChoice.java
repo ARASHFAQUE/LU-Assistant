@@ -3,6 +3,7 @@ package oop;
 import java.util.Scanner;
 
 public class StudentChoice {
+    // After signing in this page occurs which provides students to access information they want
     void choice()
     {
         int choice;

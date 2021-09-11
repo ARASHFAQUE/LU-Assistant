@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class UpdateStudentInfo {
+    // This function is used to update any student information
     void updateInfo()
     {
         String id, name, section, cgpa, vaccine, str;
@@ -21,12 +22,13 @@ public class UpdateStudentInfo {
             while (scanner.hasNext())
             {
                 id = scanner.next();
-                if(id.equals(newID))
+                if(id.equals(newID)) // Checking if the given ID is available in database or not
                 {
                     name = scanner.next();
                     section = scanner.next();
                     cgpa = scanner.next();
                     vaccine = scanner.next();
+                    // This gives options what the admin want to update
                     System.out.println("************* What do you want to update? *************");
                     System.out.println("1. Name? ");
                     System.out.println("2. Section? ");

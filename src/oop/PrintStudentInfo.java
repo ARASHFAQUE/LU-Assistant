@@ -5,10 +5,12 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PrintStudentInfo {
+    // This function is used to print students information
     void display()
     {
         String studentID, name, section, cgpa, vaccine, id;
         try {
+            // In this file the information of enrolled students at Leading University are stored
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
             Scanner input = new Scanner(System.in);
@@ -70,14 +72,5 @@ public class PrintStudentInfo {
         {
             //System.out.println(e);
         }
-        //System.out.println("hello world");
-        /*try {
-            File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/student.txt");
-            Scanner scanner = new Scanner(file2);
-            System.out.println("Hello");
-        }catch (Exception e)
-        {
-            System.out.println(e);
-        }*/
     }
 }

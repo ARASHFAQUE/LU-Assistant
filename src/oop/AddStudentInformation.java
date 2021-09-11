@@ -4,12 +4,12 @@ import java.io.*;
 import java.util.Scanner;
 
 public class AddStudentInformation {
+    // This function is used to add information of newly enrolled students at Leading University
     void addInfo() {
         int numberOfStudent;
         String id, name, section, cgpa, vaccine, str;
         String studentID;
         try {
-            //Formatter formatter = new Formatter("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
             Scanner input = new Scanner(System.in);

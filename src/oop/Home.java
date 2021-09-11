@@ -3,6 +3,7 @@ package oop;
 import java.util.Scanner;
 
 public class Home extends AdminPanel{
+    // This is the home page of this application
     void startOfEverything()
     {
         int choice;

@@ -5,10 +5,12 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class AdminPanel {
+    // This is admin panel of this application. From here the control panel can access any information like add new student information, update information
     void controlServer()
     {
         String userName, password;
         try{
+            // In this file the username and password of admins are stored
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/adminPanel.txt");
             Scanner scanner = new Scanner(file1);
             Scanner input = new Scanner(System.in);
@@ -22,7 +24,7 @@ public class AdminPanel {
             {
                 String user = scanner.next();
                 String pass = scanner.next();
-                if(user.equals(userName) && pass.equals(password))
+                if(user.equals(userName) && pass.equals(password)) // Checking if the admins username and password is valid or not
                 {
                     valid = true;
                     break;
@@ -33,6 +35,7 @@ public class AdminPanel {
                 int choice;
                 while(true)
                 {
+                    // This gives the admins the options what they want to do
                     System.out.println("************* Please choose an option *************");
                     System.out.println("1. Add New Student Information");
                     System.out.println("2. Update Student Information");
@@ -69,14 +72,6 @@ public class AdminPanel {
                             Home home = new Home();
                             home.startOfEverything();
                             break;
-                        /*case 1:
-                            AdminPanel adminPanel = new AdminPanel();
-                            adminPanel.controlServer();
-                            break;
-                        case 2:
-                            StudentSignIn studentSignIn = new StudentSignIn();
-                            studentSignIn.signIn();
-                            break;*/
                     }
                 }
             }
