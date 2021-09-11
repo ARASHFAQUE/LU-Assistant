@@ -7,6 +7,8 @@ public class Main extends Home{
         CreateFile createFile = new CreateFile();
         createFile.createFile();
         */
+
+        // From here the project starts
         Home home = new Home();
         home.startOfEverything();
     }

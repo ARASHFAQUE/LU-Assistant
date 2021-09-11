@@ -1,11 +1,9 @@
 package oop;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Formatter;
-import java.util.Scanner;
 
 public class CreateFile {
+    // This createFile function is used only when we need to create a new file to store data
     void createFile() {
         File dir = new File("Files");
         dir.mkdir();
@@ -23,25 +21,4 @@ public class CreateFile {
             //System.out.println(e);
         }
     }
-    /*void forUpdate(String name)
-    {
-        File dir = new File("Files");
-        dir.mkdir();
-        String path = dir.getAbsolutePath();
-
-        File file3 = new File(path + "/" + name + ".txt");
-        try {
-            file3.createNewFile();
-            System.out.println("File is created.");
-        } catch (Exception e) {
-            //System.out.println(e);
-        }
-    }*/
-    /*void updateAndDelete()
-    {
-        CreateFile createFile = new CreateFile();
-        createFile.createFile();
-        createFile.forUpdate();
-
-    }*/
 }
