@@ -18,7 +18,6 @@ public class AdminPanel {
             userName = input.next();
             System.out.print("Please enter the admin password: ");
             password = input.next();
-            //System.out.println("Hello");
             boolean valid = false;
             while (scanner.hasNext())
             {
@@ -39,10 +38,11 @@ public class AdminPanel {
                     System.out.println("************* Please choose an option *************");
                     System.out.println("1. Add New Student Information");
                     System.out.println("2. Update Student Information");
-                    System.out.println("3. Add New Student Information");
-                    System.out.println("4. Update Student Information");
+                    System.out.println("3. Add New Teacher Information");
+                    System.out.println("4. Update Teacher Information");
                     System.out.println("5. Update Class Routine");
-                    System.out.println("6. Home");
+                    System.out.println("6. Update Bus Schedule");
+                    System.out.println("7. Home");
 
                     System.out.print("Enter any option you like: ");
                     choice = input.nextInt();
@@ -69,6 +69,9 @@ public class AdminPanel {
                             adminPanel.controlServer();
                             break;
                         case 6:
+                            //System.out.println("Hello");
+                            break;
+                        case 7:
                             Home home = new Home();
                             home.startOfEverything();
                             break;
