@@ -1,0 +1,17 @@
+2012020129 Md.AshfaqurRahman C 3.81 NO
+2012020179 FabiaRashidChowdhury C 3.81 NO
+2012020135 Md.AshikurRahman C 3.33 NO
+2012020107 AhsanChowdhury C 3.39 NO
+2012020106 MahdiHira C 3.71 NO
+2012020150 NashidAhmed C 3.56 NO
+1912020198 FatemaYesminMahi E 3.18 NO
+2012020023 NayeemAli A 3.93 NO
+1812020129 MazharulIslam C 3.78 YES
+2012020179 FabiaRashidChowdhury D 3.81 NO
+2012020106 MahdiHira C 3.71 YES
+2012020179 FabiaRashidChowdhury C 3.27 NO
+2012020135 Md.AshikurRahman C 3.94 NO
+2012020500 SabinaMousumi C 3.97 YES
+2012020500 SabinaMousumi D 3.97 YES
+2012020179 FabiaRashidChowdhury D 3.81 NO
+2012020036 SuhrathTahra A 3.32 NO
