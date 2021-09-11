@@ -34,7 +34,7 @@ public class Home extends AdminPanel{
                     adminPanel.controlServer();
                     break;
                 case 4:
-                    System.out.println("Exited.");
+                    System.out.println("Application Exited.");
                     System.exit(0);
                     break;
             }
