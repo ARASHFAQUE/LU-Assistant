@@ -15,3 +15,6 @@
 2012020500 SabinaMousumi D 3.97 YES
 2012020179 FabiaRashidChowdhury D 3.81 NO
 2012020036 SuhrathTahra A 3.32 NO
+2012020179 FabiaRashidChowdhury C 3.27 NO
+2012020179 FabiaRashidChowdhury D 3.27 NO
+2012020036 SuhrathKhanomTahra A 3.32 NO
