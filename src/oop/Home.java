@@ -14,6 +14,7 @@ public class Home extends AdminPanel{
             System.out.println("1. Sign Up As Student");
             System.out.println("2. Sign In As Student");
             System.out.println("3. Sign In As Admin");
+            System.out.println("4. Exit");
 
             System.out.print("Enter any option you like: ");
             Scanner input = new Scanner(System.in);
@@ -31,6 +32,10 @@ public class Home extends AdminPanel{
                 case 3:
                     AdminPanel adminPanel = new AdminPanel();
                     adminPanel.controlServer();
+                    break;
+                case 4:
+                    System.out.println("Exited.");
+                    System.exit(0);
                     break;
             }
         }

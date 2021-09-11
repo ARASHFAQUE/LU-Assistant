@@ -18,3 +18,5 @@
 2012020179 FabiaRashidChowdhury C 3.27 NO
 2012020179 FabiaRashidChowdhury D 3.27 NO
 2012020036 SuhrathKhanomTahra A 3.32 NO
+2012020122 AtikulIslamSumon C 3.91 NO
+2012020122 AtikulIslamSumon C 3.46 NO
