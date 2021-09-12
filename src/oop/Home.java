@@ -13,8 +13,9 @@ public class Home extends AdminPanel{
             System.out.println("************* Please choose an option *************");
             System.out.println("1. Sign Up As Student");
             System.out.println("2. Sign In As Student");
-            System.out.println("3. Sign In As Admin");
-            System.out.println("4. Exit");
+            System.out.println("3. Forgot Password");
+            System.out.println("4. Sign In As Admin");
+            System.out.println("5. Exit");
 
             System.out.print("Enter any option you like: ");
             Scanner input = new Scanner(System.in);
@@ -30,10 +31,14 @@ public class Home extends AdminPanel{
                     studentSignIn.signIn();
                     break;
                 case 3:
+                    StudentSignIn studentSignIn2 = new StudentSignIn();
+                    studentSignIn2.forgotPassword();
+                    break;
+                case 4:
                     AdminPanel adminPanel = new AdminPanel();
                     adminPanel.controlServer();
                     break;
-                case 4:
+                case 5:
                     System.out.println("Application Exited.");
                     System.exit(0);
                     break;

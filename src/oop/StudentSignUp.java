@@ -13,11 +13,11 @@ public class StudentSignUp {
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
             Scanner scanner = new Scanner(file1);
             Scanner input = new Scanner(System.in);
-            System.out.print("Please enter your username: ");
+            System.out.print("Please enter the username: ");
             userName = input.next();
-            System.out.print("Please enter your password: ");
+            System.out.print("Please enter the password: ");
             password = input.next();
-            System.out.print("Please enter your ID: ");
+            System.out.print("Please enter the ID: ");
             id = input.next();
             boolean duplicate = false;
             while (scanner.hasNext())
@@ -46,7 +46,7 @@ public class StudentSignUp {
             }
         }catch (Exception e)
         {
-            System.out.println("Can not read file!!!");
+            System.out.println("File not found!!!");
         }
     }
 }

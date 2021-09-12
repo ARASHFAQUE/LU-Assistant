@@ -59,7 +59,7 @@ public class AddStudentInformation {
         }
         catch (Exception e)
         {
-            System.out.println("Can not read file!!!");
+            System.out.println("File not found!!!");
         }
     }
 }
