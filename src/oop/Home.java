@@ -13,7 +13,7 @@ public class Home extends AdminPanel{
             System.out.println("************* Please choose an option *************");
             System.out.println("1. Sign Up As Student");
             System.out.println("2. Sign In As Student");
-            System.out.println("3. Forgot Password");
+            System.out.println("3. Forget Password");
             System.out.println("4. Sign In As Admin");
             System.out.println("5. Exit");
 
