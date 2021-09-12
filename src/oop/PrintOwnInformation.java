@@ -7,39 +7,23 @@ import java.util.Scanner;
 public class PrintOwnInformation {
     void displayOwn(String id)
     {
-        String studentID, name, birthDate, section, cgpa, payment, vaccine;
+        String studentID = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "";
         try {
             // In this file the information of enrolled students at Leading University are stored
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
-            String printID = "", printName = "", printBirthDate = "", printSection = "", printCgpa = "", printPayment = "", printVaccine = "";
             boolean valid = false;
             while (scanner.hasNext())
             {
                 studentID = scanner.next();
                 if(id.equals(studentID))
                 {
-                    /*printID = "";
-                    printName = "";
-                    printBirthDate = "";
-                    printSection = "";
-                    printCgpa = "";
-                    printPayment = "";
-                    printVaccine = "";*/
-                    //System.out.println("Found");
                     name = scanner.next();
                     birthDate = scanner.next();
                     section = scanner.next();
                     cgpa = scanner.next();
                     payment = scanner.next();
                     vaccine = scanner.next();
-                    printID = studentID;
-                    printName = name;
-                    printBirthDate = birthDate;
-                    printSection = section;
-                    printCgpa = cgpa;
-                    printPayment = payment;
-                    printVaccine = vaccine;
                     valid = true;
                     break;
                 }
@@ -47,10 +31,10 @@ public class PrintOwnInformation {
             if(valid)
             {
                 StringBuilder nameWithSpace = new StringBuilder();
-                nameWithSpace.append(printName.charAt(0));
-                for (int i = 1; i < printName.length(); i++)
+                nameWithSpace.append(name.charAt(0));
+                for (int i = 1; i < name.length(); i++)
                 {
-                    char ch = printName.charAt(i);
+                    char ch = name.charAt(i);
                     if(Character.isUpperCase(ch))
                     {
                         nameWithSpace.append(" ");
@@ -59,16 +43,28 @@ public class PrintOwnInformation {
                 }
                 //System.out.println("Name: " + printName);
                 System.out.println("Name: " + nameWithSpace);
-                System.out.println("Birthdate: " + printBirthDate);
-                System.out.println("ID No.: " + printID);
-                System.out.println("Section: " + printSection);
-                System.out.println("CGPA: " + printCgpa);
-                System.out.println("Payment completed?: " + printPayment);
-                if(printPayment.equals("NO"))
+                System.out.println("Birthdate: " + birthDate);
+                System.out.println("ID No.: " + id);
+                System.out.println("Section: " + section);
+                System.out.println("CGPA: " + cgpa);
+                System.out.print("Payment completed?: " + payment);
+                if(payment.equals("NO"))
                 {
-                    System.out.println("If you paid already. Please wait! It will be updated soon.");
+                    System.out.println(". If you paid already. Please wait! It will be updated soon.");
                 }
-                System.out.println("Is vaccinated?: " + printVaccine);
+                else
+                {
+                    System.out.println();
+                }
+                System.out.print("Is vaccinated?: " + vaccine);
+                if(vaccine.equals("NO"))
+                {
+                    System.out.println(". If you took the vaccine already. Please wait! It will be updated soon.");
+                }
+                else
+                {
+                    System.out.println();
+                }
             }
             if(!valid)
             {
@@ -78,7 +74,7 @@ public class PrintOwnInformation {
             }
         }catch (FileNotFoundException e)
         {
-            //System.out.println(e);
+            System.out.println("Can not read file!!!");
         }
     }
 }

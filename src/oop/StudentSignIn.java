@@ -7,7 +7,7 @@ public class StudentSignIn extends PrintOwnInformation{
     // This function is used for student sign in
     void signIn()
     {
-        String userName, password, studentID = "";
+        String userName = "", password = "", studentID = "";
         try{
             // In this file the username and password of the registered students are stored
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
@@ -32,7 +32,7 @@ public class StudentSignIn extends PrintOwnInformation{
             }
             if(valid)
             {
-                System.out.println("Signed In Successful.");
+                System.out.println("Signed In Successfully.");
                 StudentChoice studentChoice = new StudentChoice();
                 studentChoice.choice(studentID);
             }
@@ -44,7 +44,7 @@ public class StudentSignIn extends PrintOwnInformation{
             }
         }catch (Exception e)
         {
-            //System.out.println(e);
+            System.out.println("Can not read file!!!");
         }
     }
 }

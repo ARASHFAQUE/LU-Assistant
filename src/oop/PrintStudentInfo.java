@@ -8,7 +8,7 @@ public class PrintStudentInfo {
     // This function is used to print students information
     void display(String sID)
     {
-        String studentID, name, birthDate, section, cgpa, payment, vaccine;
+        String studentID = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "";
         try {
             // In this file the information of enrolled students at Leading University are stored
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
@@ -17,30 +17,18 @@ public class PrintStudentInfo {
             System.out.print("Please enter the student ID: ");
             String id = input.next();
             input.nextLine();
-            String printID = "", printName = "", printBirthDate = "", printSection = "", printCgpa = "", printPayment = "", printVaccine = "";
             boolean valid = false;
             while (scanner.hasNext())
             {
                 studentID = scanner.next();
                 if(id.equals(studentID))
                 {
-                    /*printID = "";
-                    printName = "";
-                    printSection = "";
-                    printCgpa = "";
-                    printVaccine = "";*/
-                    //System.out.println("Found");
                     name = scanner.next();
                     birthDate = scanner.next();
                     section = scanner.next();
                     cgpa = scanner.next();
                     payment = scanner.next();
                     vaccine = scanner.next();
-                    printID = studentID;
-                    printName = name;
-                    printSection = section;
-                    printCgpa = cgpa;
-                    printVaccine = vaccine;
                     valid = true;
                     break;
                 }
@@ -48,22 +36,21 @@ public class PrintStudentInfo {
             if(valid)
             {
                 StringBuilder nameWithSpace = new StringBuilder();
-                nameWithSpace.append(printName.charAt(0));
-                for (int i = 1; i < printName.length(); i++)
+                nameWithSpace.append(name.charAt(0));
+                for (int i = 1; i < name.length(); i++)
                 {
-                    char ch = printName.charAt(i);
+                    char ch = name.charAt(i);
                     if(Character.isUpperCase(ch))
                     {
                         nameWithSpace.append(" ");
                     }
                     nameWithSpace.append(ch);
                 }
-                //System.out.println("Name: " + printName);
                 System.out.println("Name: " + nameWithSpace);
-                System.out.println("ID No.: " + printID);
-                System.out.println("Section: " + printSection);
-                System.out.println("CGPA: " + printCgpa);
-                System.out.println("Is vaccinated?: " + printVaccine);
+                System.out.println("ID No.: " + id);
+                System.out.println("Section: " + section);
+                System.out.println("CGPA: " + cgpa);
+                System.out.println("Is vaccinated?: " + vaccine);
                 StudentChoice studentChoice = new StudentChoice();
                 studentChoice.choice(sID);
             }
@@ -75,12 +62,7 @@ public class PrintStudentInfo {
             }
         }catch (FileNotFoundException e)
         {
-            //System.out.println(e);
+            System.out.println("Can not read file!!!");
         }
     }
-
-    /*void displayOwn(String id)
-    {
-
-    }*/
 }

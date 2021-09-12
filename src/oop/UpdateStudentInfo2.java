@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class UpdateStudentInfo2 {
     void updateInfo2()
     {
-        String id, name, birthDate, section, cgpa, payment, vaccine, str1 = "", str2 = "";
+        String id = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "", str1 = "", str2 = "";
         try {
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
@@ -25,7 +25,6 @@ public class UpdateStudentInfo2 {
             Scanner input = new Scanner(System.in);
             String newID = input.next();
             input.nextLine();
-            String updatedID = "", updatedName = "", updatedBirthDate = "", updatedSection = "", updatedCgpa = "", updatedPayment = "", updatedVaccine = "";
             boolean found = false;
             while (scanner.hasNext())
             {
@@ -39,13 +38,6 @@ public class UpdateStudentInfo2 {
                     payment = scanner.next();
                     vaccine = scanner.next();
                     str1 = id + " " + name + " " + birthDate + " " + section + " " + cgpa + " " + payment + " " + vaccine;
-                    updatedID = id;
-                    updatedName = name;
-                    updatedBirthDate = birthDate;
-                    updatedSection = section;
-                    updatedCgpa = cgpa;
-                    updatedPayment = payment;
-                    updatedVaccine = vaccine;
                     found = true;
                     break;
                 }
@@ -68,46 +60,42 @@ public class UpdateStudentInfo2 {
                 {
                     case 1:
                         System.out.print("Enter the updated name: ");
-                        updatedName = "";
-                        updatedName = input.next();
+                        name = "";
+                        name = input.next();
                         break;
                     case 2:
                         System.out.print("Enter the updated birthdate in Day-Month-Year format: ");
-                        updatedBirthDate = "";
-                        updatedBirthDate = input.next();
+                        birthDate = "";
+                        birthDate = input.next();
                         break;
                     case 3:
                         System.out.print("Enter the updated section: ");
-                        updatedSection = "";
-                        updatedSection = input.next();
+                        section = "";
+                        section = input.next();
                         break;
                     case 4:
                         System.out.print("Enter the updated CGPA: ");
-                        updatedCgpa = "";
-                        updatedCgpa = input.next();
+                        cgpa = "";
+                        cgpa = input.next();
                         break;
                     case 5:
                         System.out.print("Payment Completed? : ");
-                        updatedPayment = "";
-                        updatedPayment = input.next();
+                        payment = "";
+                        payment = input.next();
                         break;
                     case 6:
                         System.out.print("Is vaccinated? : ");
-                        updatedVaccine = "";
-                        updatedVaccine = input.next();
+                        vaccine = "";
+                        vaccine = input.next();
                         break;
                 }
-                //System.out.println("Updated Section: " + updatedSection);
-                str2 = updatedID + " " + updatedName + " " + updatedBirthDate + " " + updatedSection + " " + updatedCgpa + " " + updatedPayment + " " + updatedVaccine;
+                str2 = id + " " + name + " " + birthDate + " " + section + " " + cgpa + " " + payment + " " + vaccine;
                 // logic to replace lines in the string
                 inputStr = inputStr.replace(str1, str2);
                 // write the new string with the replaced line OVER the same file
                 FileOutputStream fileOut = new FileOutputStream("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
                 fileOut.write(inputStr.getBytes());
                 fileOut.close();
-                /*PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file2, true)));
-                out.println(str2);
-                out.close();*/
                 System.out.println("Student Information Updated.");
             }
             else

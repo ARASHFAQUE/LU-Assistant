@@ -7,7 +7,7 @@ public class AddStudentInformation {
     // This function is used to add information of newly enrolled students at Leading University
     void addInfo() {
         int numberOfStudent;
-        String id, name, birthDate, section, cgpa, payment, vaccine, str;
+        String id = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "", str = "";
         String studentID;
         try {
             File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
@@ -17,7 +17,7 @@ public class AddStudentInformation {
             numberOfStudent = input.nextInt();
             for (int i = 1; i <= numberOfStudent; i++)
             {
-                System.out.println("Enter the information of " + i + " student: ");
+                System.out.println("Enter the information of student no. " + i + ": ");
                 System.out.print("ID No.: ");
                 id = input.next();
                 boolean alreadyExists = false;
@@ -59,7 +59,7 @@ public class AddStudentInformation {
         }
         catch (Exception e)
         {
-            //System.out.println(e);
+            System.out.println("Can not read file!!!");
         }
     }
 }

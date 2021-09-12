@@ -11,7 +11,7 @@ public class StudentChoice {
         {
             System.out.println("************* Please choose an option *************");
             System.out.println("1. Your Information");
-            System.out.println("2. Any Student Information");
+            System.out.println("2. Other Student Information");
             System.out.println("3. Teacher Information");
             System.out.println("4. Class Routine");
             System.out.println("5. Bus Schedule");

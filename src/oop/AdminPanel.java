@@ -53,8 +53,6 @@ public class AdminPanel {
                             addStudentInformation.addInfo();
                             break;
                         case 2:
-                            /*UpdateStudentInfo updateStudentInfo = new UpdateStudentInfo();
-                            updateStudentInfo.updateInfo();*/
                             UpdateStudentInfo2 updateStudentInfo2 = new UpdateStudentInfo2();
                             updateStudentInfo2.updateInfo2();
                             break;
@@ -89,7 +87,7 @@ public class AdminPanel {
             }
         }catch (FileNotFoundException e)
         {
-            //System.out.println(e);
+            System.out.println("Can not read file!!!");
         }
     }
 }

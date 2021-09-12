@@ -7,7 +7,7 @@ public class StudentSignUp {
     // This function is used for sign up
     void signUp()
     {
-        String userName, password, id, str;
+        String userName = "", password = "", id = "", str = "";
         try{
             // This file stores the username and password of newly registered students on this application
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
@@ -37,7 +37,7 @@ public class StudentSignUp {
                 PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file1, true)));
                 out.println(str);
                 out.close();
-                System.out.println("Sign up successful. Please sign in now.");
+                System.out.println("Signed up successfully. Please sign in now.");
             }
             else
             {
@@ -46,7 +46,7 @@ public class StudentSignUp {
             }
         }catch (Exception e)
         {
-            //System.out.println(e);
+            System.out.println("Can not read file!!!");
         }
     }
 }
