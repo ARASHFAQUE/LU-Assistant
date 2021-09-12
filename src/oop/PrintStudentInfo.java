@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class PrintStudentInfo {
     // This function is used to print students information
-    void display(String user, String pass)
+    void display(String sID)
     {
         String studentID, name, birthDate, section, cgpa, payment, vaccine;
         try {
@@ -64,13 +64,13 @@ public class PrintStudentInfo {
                 System.out.println("CGPA: " + printCgpa);
                 System.out.println("Is vaccinated?: " + printVaccine);
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice(user, pass);
+                studentChoice.choice(sID);
             }
             if(!valid)
             {
                 System.out.println("ID No. is not correct! Please try again.");
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice(user, pass);
+                studentChoice.choice(sID);
             }
         }catch (FileNotFoundException e)
         {

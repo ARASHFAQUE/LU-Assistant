@@ -7,7 +7,7 @@ public class StudentSignIn extends PrintOwnInformation{
     // This function is used for student sign in
     void signIn()
     {
-        String userName, password;
+        String userName, password, studentID = "";
         try{
             // In this file the username and password of the registered students are stored
             File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
@@ -25,6 +25,7 @@ public class StudentSignIn extends PrintOwnInformation{
                 String id = scanner.next();
                 if(user.equals(userName) && pass.equals(password)) // Checking if the given username and password is valid or not
                 {
+                    studentID = id;
                     valid = true;
                     break;
                 }
@@ -33,7 +34,7 @@ public class StudentSignIn extends PrintOwnInformation{
             {
                 System.out.println("Signed In Successful.");
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice(userName, password);
+                studentChoice.choice(studentID);
             }
             else
             {

@@ -5,32 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PrintOwnInformation {
-    void ownInfo(String userName, String password)
-    {
-        //String userName, password;
-        try{
-            // In this file the username and password of the registered students are stored
-            File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
-            Scanner scanner = new Scanner(file1); // Scanner class is called to read the file
-            boolean valid = false;
-            while (scanner.hasNext())
-            {
-                String user = scanner.next();
-                String pass = scanner.next();
-                String id = scanner.next();
-                if(user.equals(userName) && pass.equals(password)) // Checking if the given username and password is valid or not
-                {
-                    PrintOwnInformation printOwnInformation = new PrintOwnInformation();
-                    printOwnInformation.displayOwn(id, user, pass);
-                }
-            }
-        }catch (Exception e)
-        {
-            //System.out.println(e);
-        }
-    }
-
-    void displayOwn(String id, String user, String pass)
+    void displayOwn(String id)
     {
         String studentID, name, birthDate, section, cgpa, payment, vaccine;
         try {
@@ -94,7 +69,7 @@ public class PrintOwnInformation {
             {
                 System.out.println("Information is not added yet! Will be added soon.");
                 StudentChoice studentChoice = new StudentChoice();
-                studentChoice.choice(user, pass);
+                studentChoice.choice(id);
             }
         }catch (FileNotFoundException e)
         {

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class StudentChoice {
     // After signing in this page occurs which provides students to access information they want
-    void choice(String user, String pass)
+    void choice(String id)
     {
         int choice;
         while(true)
@@ -24,11 +24,11 @@ public class StudentChoice {
             {
                 case 1:
                     PrintOwnInformation printOwnInformation = new PrintOwnInformation();
-                    printOwnInformation.ownInfo(user, pass);
+                    printOwnInformation.displayOwn(id);
                     break;
                 case 2:
                     PrintStudentInfo printStudentInfo = new PrintStudentInfo();
-                    printStudentInfo.display(user, pass);
+                    printStudentInfo.display(id);
                     break;
                 case 3:
                     StudentSignIn studentSignIn = new StudentSignIn();
