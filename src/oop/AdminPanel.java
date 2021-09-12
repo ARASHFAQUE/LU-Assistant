@@ -53,8 +53,10 @@ public class AdminPanel {
                             addStudentInformation.addInfo();
                             break;
                         case 2:
-                            UpdateStudentInfo updateStudentInfo = new UpdateStudentInfo();
-                            updateStudentInfo.updateInfo();
+                            /*UpdateStudentInfo updateStudentInfo = new UpdateStudentInfo();
+                            updateStudentInfo.updateInfo();*/
+                            UpdateStudentInfo2 updateStudentInfo2 = new UpdateStudentInfo2();
+                            updateStudentInfo2.updateInfo2();
                             break;
                         case 3:
                             /*AddStudentInformation addStudentInformation = new AddStudentInformation();

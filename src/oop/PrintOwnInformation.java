@@ -19,13 +19,13 @@ public class PrintOwnInformation {
                 studentID = scanner.next();
                 if(id.equals(studentID))
                 {
-                    printID = "";
+                    /*printID = "";
                     printName = "";
                     printBirthDate = "";
                     printSection = "";
                     printCgpa = "";
                     printPayment = "";
-                    printVaccine = "";
+                    printVaccine = "";*/
                     //System.out.println("Found");
                     name = scanner.next();
                     birthDate = scanner.next();
@@ -41,6 +41,7 @@ public class PrintOwnInformation {
                     printPayment = payment;
                     printVaccine = vaccine;
                     valid = true;
+                    break;
                 }
             }
             if(valid)
@@ -63,6 +64,10 @@ public class PrintOwnInformation {
                 System.out.println("Section: " + printSection);
                 System.out.println("CGPA: " + printCgpa);
                 System.out.println("Payment completed?: " + printPayment);
+                if(printPayment.equals("NO"))
+                {
+                    System.out.println("If you paid already. Please wait! It will be updated soon.");
+                }
                 System.out.println("Is vaccinated?: " + printVaccine);
             }
             if(!valid)

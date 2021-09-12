@@ -27,6 +27,7 @@ public class AddStudentInformation {
                     if(id.equals(studentID))
                     {
                         alreadyExists = true;
+                        break;
                     }
                 }
                 if(!alreadyExists)

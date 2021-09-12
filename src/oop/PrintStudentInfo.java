@@ -24,11 +24,11 @@ public class PrintStudentInfo {
                 studentID = scanner.next();
                 if(id.equals(studentID))
                 {
-                    printID = "";
+                    /*printID = "";
                     printName = "";
                     printSection = "";
                     printCgpa = "";
-                    printVaccine = "";
+                    printVaccine = "";*/
                     //System.out.println("Found");
                     name = scanner.next();
                     birthDate = scanner.next();
@@ -42,6 +42,7 @@ public class PrintStudentInfo {
                     printCgpa = cgpa;
                     printVaccine = vaccine;
                     valid = true;
+                    break;
                 }
             }
             if(valid)
