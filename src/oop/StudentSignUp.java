@@ -25,7 +25,7 @@ public class StudentSignUp {
                 String user = scanner.next();
                 String pass = scanner.next();
                 String userID = scanner.next();
-                if(user.equals(userName) && id.equals(userID))
+                if(user.equals(userName))
                 {
                     duplicate = true;
                     break;
