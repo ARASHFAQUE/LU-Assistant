@@ -42,7 +42,8 @@ public class StudentSignUp {
             else
             {
                 System.out.println("Username must be unique. Please try again.");
-                signUp();
+                Home home = new Home();
+                home.startOfEverything();
             }
         }catch (Exception e)
         {
