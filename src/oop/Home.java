@@ -42,6 +42,9 @@ public class Home extends AdminPanel{
                     System.out.println("Application Exited.");
                     System.exit(0);
                     break;
+                default:
+                    System.out.println("Invalid Choice.");
+                    startOfEverything();
             }
         }
     }
