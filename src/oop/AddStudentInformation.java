@@ -1,7 +1,7 @@
 package oop;
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class AddStudentInformation {
     // This function is used to add information of newly enrolled students at Leading University
@@ -10,9 +10,13 @@ public class AddStudentInformation {
         String id = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "", str = "";
         String studentID;
         try {
-            File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file2 = new File(path + "/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
             Scanner input = new Scanner(System.in);
+
             System.out.print("Enter the number of students: ");
             numberOfStudent = input.nextInt();
             for (int i = 1; i <= numberOfStudent; i++)
