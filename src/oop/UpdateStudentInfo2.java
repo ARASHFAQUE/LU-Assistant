@@ -1,16 +1,19 @@
 package oop;
 
 import java.io.*;
-import java.util.Scanner;
+import java.util.*;
 
 public class UpdateStudentInfo2 {
     void updateInfo2()
     {
         String id = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "", str1 = "", str2 = "";
         try {
-            File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file2 = new File(path + "/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
-            BufferedReader file3 = new BufferedReader(new FileReader("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt"));
+            BufferedReader file3 = new BufferedReader(new FileReader(file2));
             StringBuilder inputBuffer = new StringBuilder();
             String line;
 
@@ -93,7 +96,7 @@ public class UpdateStudentInfo2 {
                 // logic to replace lines in the string
                 inputStr = inputStr.replace(str1, str2);
                 // write the new string with the replaced line OVER the same file
-                FileOutputStream fileOut = new FileOutputStream("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
+                FileOutputStream fileOut = new FileOutputStream(file2);
                 fileOut.write(inputStr.getBytes());
                 fileOut.close();
                 System.out.println("Student Information Updated.");
