@@ -9,7 +9,7 @@ public class TuitonFeesCalculator {
             int cseFees=319000,cseTotal=391000;
             int wav;
             int othersFees=72000;
-
+            //start
             System.out.println("Select A Program");
             System.out.println("1)Undergraduate\t \t" + "2)Graduate");
             Scanner sc = new Scanner(System.in);
@@ -617,7 +617,7 @@ public class TuitonFeesCalculator {
                                         wav = 15;
                                         avg = (lawFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 3,20,700 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((lawFees - avg) + lawOthersFees) + "৳");
+                                                "You will enjoy a total of 15% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((lawFees - avg) + lawOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 124);
@@ -645,7 +645,7 @@ public class TuitonFeesCalculator {
 
                 }//program er sesh
             }//protom if
-        }//protom er brek
+        }
     }//while er brak
 
 }
