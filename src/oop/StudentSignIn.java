@@ -1,10 +1,7 @@
 package oop;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class StudentSignIn extends PrintOwnInformation{
     // This function is used for student sign in
@@ -13,7 +10,10 @@ public class StudentSignIn extends PrintOwnInformation{
         String userName = "", password = "", studentID = "";
         try{
             // In this file the username and password of the registered students are stored
-            File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file1 = new File(path + "/usernameAndPassword.txt");
             Scanner scanner = new Scanner(file1); // Scanner class is called to read the file
             Scanner input = new Scanner(System.in);
             System.out.print("Please enter the username: ");
@@ -55,9 +55,12 @@ public class StudentSignIn extends PrintOwnInformation{
         String userName = "", password = "", studentID = "", str1 = "", str2 = "";
         try{
             // In this file the username and password of the registered students are stored
-            File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file1 = new File(path + "/usernameAndPassword.txt");
             Scanner scanner = new Scanner(file1); // Scanner class is called to read the file
-            BufferedReader file3 = new BufferedReader(new FileReader("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt"));
+            BufferedReader file3 = new BufferedReader(new FileReader(file1));
             StringBuilder inputBuffer = new StringBuilder();
             String line;
 
@@ -117,7 +120,7 @@ public class StudentSignIn extends PrintOwnInformation{
                 str2 = userName + " " + password + " " + studentID;
                 inputStr = inputStr.replace(str1, str2);
                 // write the new string with the replaced line OVER the same file
-                FileOutputStream fileOut = new FileOutputStream("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
+                FileOutputStream fileOut = new FileOutputStream(file1);
                 fileOut.write(inputStr.getBytes());
                 fileOut.close();
                 System.out.println("Password Updated. You can sign in now.");
