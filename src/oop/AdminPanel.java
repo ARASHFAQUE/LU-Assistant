@@ -11,7 +11,10 @@ public class AdminPanel {
         String userName, password;
         try{
             // In this file the username and password of admins are stored
-            File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/adminPanel.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file1 = new File(path + "/adminPanel.txt");
             Scanner scanner = new Scanner(file1);
             Scanner input = new Scanner(System.in);
             System.out.print("Please enter the admin username: ");
@@ -40,9 +43,10 @@ public class AdminPanel {
                     System.out.println("2. Update Student Information");
                     System.out.println("3. Add New Teacher Information");
                     System.out.println("4. Update Teacher Information");
-                    System.out.println("5. Update Class Routine");
-                    System.out.println("6. Update Bus Schedule");
-                    System.out.println("7. Home");
+                    System.out.println("5. Delete Teacher Information");
+                    System.out.println("6. Update Class Routine");
+                    System.out.println("7. Update Bus Schedule");
+                    System.out.println("8. Home");
 
                     System.out.print("Enter any option you like: ");
                     choice = input.nextInt();
@@ -57,22 +61,26 @@ public class AdminPanel {
                             updateStudentInfo2.updateInfo2();
                             break;
                         case 3:
-                            /*AddStudentInformation addStudentInformation = new AddStudentInformation();
-                            addStudentInformation.addInfo();*/
+                            TeacherInformation addTeacherInformation = new TeacherInformation();
+                            addTeacherInformation.addTeacherInformation();
                             break;
                         case 4:
-                            /*UpdateStudentInfo updateStudentInfo = new UpdateStudentInfo();
-                            updateStudentInfo.updateInfo();*/
+                            TeacherInformation updateTeacherInformation = new TeacherInformation();
+                            updateTeacherInformation.updateTeacherInformation();
                             break;
                         case 5:
+                            TeacherInformation deleteTeacherInformation = new TeacherInformation();
+                            deleteTeacherInformation.deleteTeacherInformation();
+                            break;
+                        case 6:
                             RoutineBusSchedule routine = new RoutineBusSchedule();
                             routine.routine();
                             break;
-                        case 6:
+                        case 7:
                             RoutineBusSchedule busSchedule = new RoutineBusSchedule();
                             busSchedule.schedule();
                             break;
-                        case 7:
+                        case 8:
                             Home home = new Home();
                             home.startOfEverything();
                             break;
