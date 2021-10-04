@@ -13,7 +13,10 @@ public class UpdateStudentInfo {
     {
         String id, name, birthDate, section, cgpa, payment, vaccine, str;
         try {
-            File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file2 = new File(path + "/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
             System.out.print("Enter the ID No. of the student you want to update: ");
             Scanner input = new Scanner(System.in);
