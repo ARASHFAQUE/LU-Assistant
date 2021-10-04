@@ -1,8 +1,7 @@
 package oop;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 public class PrintStudentInfo {
     // This function is used to print students information
@@ -11,7 +10,10 @@ public class PrintStudentInfo {
         String studentID = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "";
         try {
             // In this file the information of enrolled students at Leading University are stored
-            File file2 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/studentInfo.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file2 = new File(path + "/studentInfo.txt");
             Scanner scanner = new Scanner(file2);
             Scanner input = new Scanner(System.in);
             System.out.print("Please enter the student ID: ");
