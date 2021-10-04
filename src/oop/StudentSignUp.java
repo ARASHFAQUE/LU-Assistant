@@ -10,9 +10,13 @@ public class StudentSignUp {
         String userName = "", password = "", id = "", str = "";
         try{
             // This file stores the username and password of newly registered students on this application
-            File file1 = new File("E:/Varsity/Semesters/Varsity-2_2/OOP/Project/Project-Practice/Files/usernameAndPassword.txt");
+            File dir = new File("Files");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
+            File file1 = new File(path + "/usernameAndPassword.txt");
             Scanner scanner = new Scanner(file1);
             Scanner input = new Scanner(System.in);
+
             System.out.print("Please enter the username: ");
             userName = input.next();
             System.out.print("Please enter the password: ");
