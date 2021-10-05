@@ -121,13 +121,13 @@ public class AdminPanel {
                                     addClassRepresentativeInformation.addClassRepresentativeInformation();
                                     break;
                                 case 2:
-                                    /*ClassRepresentativeInformation addClassRepresentativeInformation = new ClassRepresentativeInformation();
-                                    addClassRepresentativeInformation.addClassRepresentativeInformation();
-                                    break;*/
+                                    ClassRepresentativeInformation updateClassRepresentativeInformation = new ClassRepresentativeInformation();
+                                    updateClassRepresentativeInformation.updateClassRepresentative();
+                                    break;
                                 case 3:
-                                    /*ClassRepresentativeInformation addClassRepresentativeInformation = new ClassRepresentativeInformation();
-                                    addClassRepresentativeInformation.addClassRepresentativeInformation();
-                                    break;*/
+                                    ClassRepresentativeInformation deleteClassRepresentativeInformation = new ClassRepresentativeInformation();
+                                    deleteClassRepresentativeInformation.deleteClassRepresentative();
+                                    break;
                             }
                             break;
                         case 4:
