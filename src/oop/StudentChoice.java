@@ -31,6 +31,7 @@ public class StudentChoice {
                     printStudentInfo.display(id);
                     break;
                 case 3:
+                    System.out.println("************* Please choose an option *************");
                     System.out.println("1. Search Teacher Information");
                     System.out.println("2. Display Teacher Information");
 
