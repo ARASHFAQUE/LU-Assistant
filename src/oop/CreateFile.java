@@ -13,11 +13,14 @@ public class CreateFile {
         File file2 = new File(path + "/studentInfo.txt");
         File file3 = new File(path + "/adminPanel.txt");
         File file4 = new File(path + "/teacherInfo.txt");
+        File file5 = new File(path + "/CRInfo.txt");
         try {
             file1.createNewFile();
             file2.createNewFile();
             file3.createNewFile();
             file4.createNewFile();
+            file5.createNewFile();
+
             System.out.println("Files are created.");
         } catch (Exception e) {
             //System.out.println(e);
