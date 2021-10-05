@@ -66,8 +66,9 @@ public class StudentChoice {
                             searchClassRepresentativeInformation.searchClassRepresentative();
                             break;
                         case 2:
-
-                            //break;
+                            ClassRepresentativeInformation displayClassRepresentativeInformation = new ClassRepresentativeInformation();
+                            displayClassRepresentativeInformation.displayClassRepresentative();
+                            break;
                     }
                     break;
                 case 5:
