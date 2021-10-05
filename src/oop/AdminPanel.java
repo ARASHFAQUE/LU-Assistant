@@ -41,7 +41,7 @@ public class AdminPanel {
                     System.out.println("************* Please choose an option *************");
                     System.out.println("1. Add New Student Information");
                     System.out.println("2. Update Student Information");
-                    System.out.println("3. Delete Teacher Information");
+                    System.out.println("3. Delete Student Information");
                     System.out.println("4. Add New Teacher Information");
                     System.out.println("5. Update Teacher Information");
                     System.out.println("6. Delete Teacher Information");
