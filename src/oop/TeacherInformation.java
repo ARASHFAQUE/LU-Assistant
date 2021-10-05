@@ -22,7 +22,6 @@ public class TeacherInformation {
 
             for (int i = 1; i <= numberOfTeacher; i++) {
 
-
                 System.out.println("Enter the information of Teacher no. " + i + ": ");
 
                 System.out.print("Enter the Teacher Name: ");
@@ -235,13 +234,13 @@ public class TeacherInformation {
 
                 if(found)
                 {
-                    System.out.println("What do you wanna update?");
+                    System.out.println("************* Please choose an option *************");
+                    System.out.println("*************What do you wanna update?*************");
                     System.out.println("1. Name");
                     System.out.println("2. Faculty");
                     System.out.println("3. Position");
                     System.out.println("4. Number");
-                    System.out.println("5. E-mail");
-                    System.out.println("6. Vaccine Status");
+                    System.out.println("5. Vaccine Status");
                     System.out.println("Please choose any option you like: ");
 
                     int choice = input.nextInt();
@@ -264,10 +263,6 @@ public class TeacherInformation {
                             number = input.next();
                             break;
                         case 5:
-                            System.out.println("Enter the updated E-mail: ");
-                            mail = input.next();
-                            break;
-                        case 6:
                             System.out.println("Enter the updated Vaccine status: ");
                             vaccine = input.next();
                             break;
@@ -344,37 +339,12 @@ public class TeacherInformation {
 
                 if(found)
                 {
-                    System.out.println("What do you wanna Delete?");
-                    System.out.println("1. Name");
-                    System.out.println("2. Faculty");
-                    System.out.println("3. Position");
-                    System.out.println("4. Number");
-                    System.out.println("5. E-mail");
-                    System.out.println("6. Vaccine Status");
-                    System.out.println("Please choose any option you like: ");
-
-                    int choice = input.nextInt();
-                    System.out.print("\n");
-                    switch (choice) {
-                        case 1:
-                            name = " ";
-                            break;
-                        case 2:
-                            faculty = " ";
-                            break;
-                        case 3:
-                            position = " ";
-                            break;
-                        case 4:
-                            number = " ";
-                            break;
-                        case 5:
-                            mail = " ";
-                            break;
-                        case 6:
-                            vaccine = " ";
-                            break;
-                    }
+                    name = " ";
+                    faculty = " ";
+                    position = " ";
+                    number = " ";
+                    mail = " ";
+                    vaccine = " ";
 
                     str2 = name+" "+faculty+" "+position+" "+number+" "+mail+" "+vaccine;
 
