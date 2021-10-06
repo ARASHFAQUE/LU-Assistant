@@ -162,7 +162,7 @@ public class TuitonFeesCalculator {
                                         wav = 35;
                                         avg = (eeeFees * wav) / 100;
                                         System.out.println("Thank you for choosing EEE.Total Cost of the Program is: 4,07,000 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((eeeFees - avg) + eeeOthersFees) + "৳");
+                                                "You will enjoy a total of 35% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((eeeFees - avg) + eeeOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 157);
@@ -173,7 +173,7 @@ public class TuitonFeesCalculator {
                                         wav = 25;
                                         avg = (eeeFees * wav) / 100;
                                         System.out.println("Thank you for choosing EEE.Total Cost of the Program is: 4,07,000 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((eeeFees - avg) + eeeOthersFees) + "৳");
+                                                "You will enjoy a total of 25% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((eeeFees - avg) + eeeOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 157);
@@ -249,7 +249,7 @@ public class TuitonFeesCalculator {
                                         wav = 35;
                                         avg = (civilFees * wav) / 100;
                                         System.out.println("Thank you for choosing Civil Engineering.Total Cost of the Program is: 4,80,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((civilFees - avg) + civilOthersFees) + "৳");
+                                                "You will enjoy a total of 35% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((civilFees - avg) + civilOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 164);
@@ -260,7 +260,7 @@ public class TuitonFeesCalculator {
                                         wav = 25;
                                         avg = (civilFees * wav) / 100;
                                         System.out.println("Thank you for choosing Civil Engineering.Total Cost of the Program is: 4,80,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((civilFees - avg) + civilOthersFees) + "৳");
+                                                "You will enjoy a total of 25% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((civilFees - avg) + civilOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 164);
@@ -271,7 +271,7 @@ public class TuitonFeesCalculator {
                                         wav = 15;
                                         avg = (civilFees * wav) / 100;
                                         System.out.println("Thank you for choosing Civil Engineering.Total Cost of the Program is: 4,80,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((civilFees - avg) + civilOthersFees) + "৳");
+                                                "You will enjoy a total of 15% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((civilFees - avg) + civilOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 164);
@@ -335,7 +335,7 @@ public class TuitonFeesCalculator {
                                         wav = 35;
                                         avg = (bbaFees * wav) / 100;
                                         System.out.println("Thank you for choosing Civil Engineering.Total Cost of the Program is: 3,85,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((bbaFees - avg) + bbaOthersFees) + "৳");
+                                                "You will enjoy a total of 35% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((bbaFees - avg) + bbaOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 132);
@@ -346,7 +346,7 @@ public class TuitonFeesCalculator {
                                         wav = 25;
                                         avg = (bbaFees * wav) / 100;
                                         System.out.println("Thank you for choosing Civil Engineering.Total Cost of the Program is: 3,85,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((bbaFees - avg) + bbaOthersFees) + "৳");
+                                                "You will enjoy a total of 25% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((bbaFees - avg) + bbaOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 132);
@@ -357,7 +357,7 @@ public class TuitonFeesCalculator {
                                         wav = 15;
                                         avg = (bbaFees * wav) / 100;
                                         System.out.println("Thank you for choosing Civil Engineering.Total Cost of the Program is: 3,85,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((bbaFees - avg) + bbaOthersFees) + "৳");
+                                                "You will enjoy a total of 15% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((bbaFees - avg) + bbaOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 132);
@@ -421,7 +421,7 @@ public class TuitonFeesCalculator {
                                         wav = 35;
                                         avg = (arcFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 5,90,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((arcFees - avg) + arcOthersFees) + "৳");
+                                                "You will enjoy a total of 35% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((arcFees - avg) + arcOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 198);
@@ -432,7 +432,7 @@ public class TuitonFeesCalculator {
                                         wav = 25;
                                         avg = (arcFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 5,90,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((arcFees - avg) + arcOthersFees) + "৳");
+                                                "You will enjoy a total of 25% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((arcFees - avg) + arcOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 198);
@@ -443,7 +443,7 @@ public class TuitonFeesCalculator {
                                         wav = 15;
                                         avg = (arcFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 5,90,200 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((arcFees - avg) + arcOthersFees) + "৳");
+                                                "You will enjoy a total of 15% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((arcFees - avg) + arcOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 198);
@@ -508,7 +508,7 @@ public class TuitonFeesCalculator {
                                         wav = 35;
                                         avg = (engFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 2,85,800 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((engFees - avg) + engOthersFees) + "৳");
+                                                "You will enjoy a total of 35% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((engFees - avg) + engOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 124);
@@ -519,7 +519,7 @@ public class TuitonFeesCalculator {
                                         wav = 25;
                                         avg = (engFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 2,85,800 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((engFees - avg) + engOthersFees) + "৳");
+                                                "You will enjoy a total of 25% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((engFees - avg) + engOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 124);
@@ -530,7 +530,7 @@ public class TuitonFeesCalculator {
                                         wav = 15;
                                         avg = (engFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 2,85,800 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((engFees - avg) + engOthersFees) + "৳");
+                                                "You will enjoy a total of 15% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((engFees - avg) + engOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 124);
@@ -595,7 +595,7 @@ public class TuitonFeesCalculator {
                                         wav = 35;
                                         avg = (lawFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 3,20,700 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((lawFees - avg) + lawOthersFees) + "৳");
+                                                "You will enjoy a total of 35% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((lawFees - avg) + lawOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 124);
@@ -606,7 +606,7 @@ public class TuitonFeesCalculator {
                                         wav = 25;
                                         avg = (lawFees * wav) / 100;
                                         System.out.println("Thank you for choosing Architecture.Total Cost of the Program is: 3,20,700 ৳.\n" +
-                                                "You will enjoy a total of 50% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((lawFees - avg) + lawOthersFees) + "৳");
+                                                "You will enjoy a total of 25% Waiver on your Tuition fees.\nSo,Total Cost of your Study is:" + ((lawFees - avg) + lawOthersFees) + "৳");
 
                                         System.out.println("********************");
                                         System.out.println("Total Credit :" + 124);
