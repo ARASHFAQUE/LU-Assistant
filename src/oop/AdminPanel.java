@@ -39,20 +39,12 @@ public class AdminPanel {
                 {
                     // This gives the admins the options what they want to do
                     System.out.println("************* Please choose an option *************");
-                    /*System.out.println("1. Add New Student Information");
-                    System.out.println("2. Update Student Information");
-                    System.out.println("3. Delete Student Information");
-                    System.out.println("4. Add New Teacher Information");
-                    System.out.println("5. Update Teacher Information");
-                    System.out.println("6. Delete Teacher Information");
-                    System.out.println("6. Add Class Representative Information");
-                    System.out.println("7. Update Class Routine");
-                    System.out.println("8. Update Bus Schedule");*/
                     System.out.println("1. Student Information");
                     System.out.println("2. Teacher Information");
                     System.out.println("3. CR Information");
                     System.out.println("4. Class Routine & Bus Schedule");
-                    System.out.println("5. Home");
+                    System.out.println("5. Book Information");
+                    System.out.println("6. Home");
 
                     System.out.print("Enter any option you like: ");
                     choice = input.nextInt();
@@ -151,6 +143,22 @@ public class AdminPanel {
                             }
                             break;
                         case 5:
+                            System.out.println("****** Please choose an option *******");
+                            System.out.println("1. Add New Book");
+                            System.out.println("2. Update Book");
+                            System.out.println("3. Delete Book");
+
+                            System.out.print("Enter any option you like: ");
+                            choice = input.nextInt();
+                            switch (choice)
+                            {
+                                case 1:
+                                    LibraryInformation addBookInfo = new LibraryInformation();
+                                    addBookInfo.addBookInformation();
+                                    break;
+                            }
+                            break;
+                        case 6:
                             Home home = new Home();
                             home.startOfEverything();
                             break;
@@ -163,6 +171,7 @@ public class AdminPanel {
                 Home home = new Home();
                 home.startOfEverything();
             }
+
         }catch (FileNotFoundException e)
         {
             System.out.println("Can not read file!!!");
