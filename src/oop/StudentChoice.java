@@ -16,7 +16,8 @@ public class StudentChoice {
             System.out.println("4. CR Information");
             System.out.println("5. Class Routine");
             System.out.println("6. Bus Schedule");
-            System.out.println("7. Home");
+            System.out.println("7. Library Information");
+            System.out.println("8. Home");
 
             System.out.print("Enter any option you like: ");
             Scanner input = new Scanner(System.in);
@@ -80,6 +81,52 @@ public class StudentChoice {
                     busSchedule.schedule();
                     break;
                 case 7:
+                    System.out.println("************* Please choose an option *************");
+                    System.out.println("1. Library Membership Form");
+                    System.out.println("2. Book Information");
+                    System.out.println("3. Library Time");
+                    System.out.println("4. Contact Library");
+
+                    System.out.print("Enter any option you like: ");
+
+                    choice = input.nextInt();
+                    switch (choice)
+                    {
+                        case 1:
+                            LibraryInformation libraryMembership = new LibraryInformation();
+                            libraryMembership.libraryMembership();
+                            break;
+                        case 2:
+                            System.out.println("************* Please choose an option *************");
+                            System.out.println("1. Search Book Information");
+                            System.out.println("2. Display Book Information");
+
+                            System.out.print("Enter any option you like: ");
+
+                            choice = input.nextInt();
+                            switch (choice)
+                            {
+                                case 1:
+                                    LibraryInformation searchLibraryInformation = new LibraryInformation();
+                                    searchLibraryInformation.searchBookInformation();
+                                    break;
+                                case 2:
+                                    /*LibraryInformation addLibraryInformation = new LibraryInformation();
+                                    addLibraryInformation.addBookInformation();
+                                    break;*/
+                            }
+                            break;
+                        case 3:
+                            LibraryInformation libraryTime = new LibraryInformation();
+                            libraryTime.libraryTime();
+                            break;
+                        case 4:
+                            LibraryInformation libraryContact = new LibraryInformation();
+                            libraryContact.libraryContact();
+                            break;
+                    }
+                    break;
+                case 8:
                     Home home = new Home();
                     home.startOfEverything();
                     break;
