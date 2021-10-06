@@ -39,11 +39,11 @@ public class AdminPanel {
                 {
                     // This gives the admins the options what they want to do
                     System.out.println("************* Please choose an option *************");
-                    System.out.println("1. Student Information");
-                    System.out.println("2. Teacher Information");
-                    System.out.println("3. CR Information");
-                    System.out.println("4. Class Routine & Bus Schedule");
-                    System.out.println("5. Book Information");
+                    System.out.println("1. Student Section");
+                    System.out.println("2. Teacher Section");
+                    System.out.println("3. CR Section");
+                    System.out.println("4. Class Routine & Bus Schedule Section");
+                    System.out.println("5. Library Section");
                     System.out.println("6. Home");
 
                     System.out.print("Enter any option you like: ");
@@ -52,9 +52,9 @@ public class AdminPanel {
                     {
                         case 1:
                             System.out.println("****** Please choose an option *******");
-                            System.out.println("1. Add New Student");
-                            System.out.println("2. Update Student");
-                            System.out.println("3. Delete Student");
+                            System.out.println("1. Add New Student Information");
+                            System.out.println("2. Update Student Information");
+                            System.out.println("3. Delete Student Information");
 
                             System.out.print("Enter any option you like: ");
                             choice = input.nextInt();
@@ -75,9 +75,9 @@ public class AdminPanel {
                             break;
                         case 2:
                             System.out.println("****** Please choose an option *******");
-                            System.out.println("1. Add New Teacher");
-                            System.out.println("2. Update Teacher");
-                            System.out.println("3. Delete Teacher");
+                            System.out.println("1. Add New Teacher Information");
+                            System.out.println("2. Update Teacher Information");
+                            System.out.println("3. Delete Teacher Information");
 
                             System.out.print("Enter any option you like: ");
                             choice = input.nextInt();
@@ -99,9 +99,9 @@ public class AdminPanel {
                             break;
                         case 3:
                             System.out.println("****** Please choose an option *******");
-                            System.out.println("1. Add New CR");
-                            System.out.println("2. Update CR");
-                            System.out.println("3. Delete CR");
+                            System.out.println("1. Add New CR Information");
+                            System.out.println("2. Update CR Information");
+                            System.out.println("3. Delete CR Information");
 
                             System.out.print("Enter any option you like: ");
                             choice = input.nextInt();
@@ -144,9 +144,9 @@ public class AdminPanel {
                             break;
                         case 5:
                             System.out.println("****** Please choose an option *******");
-                            System.out.println("1. Add New Book");
-                            System.out.println("2. Update Book");
-                            System.out.println("3. Delete Book");
+                            System.out.println("1. Add New Book Information");
+                            System.out.println("2. Update Book Information");
+                            System.out.println("3. Delete Book Information");
 
                             System.out.print("Enter any option you like: ");
                             choice = input.nextInt();
