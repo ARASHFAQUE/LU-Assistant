@@ -642,8 +642,8 @@ public class TuitonFeesCalculator {
                                 break;
                         }
                     case 2:
-                        System.out.println("1.Diploma in Data Telecommunication & Networking(Coming Soon)");
-                        System.out.println("2.Diploma in Hotel Management(Coming Soon)");
+                        System.out.println("1.Diploma in Data Telecommunication & Networking");
+                        System.out.println("2.Diploma in Hotel Management");
                         Scanner scc3=new Scanner(System.in);
                         int choice12=scc3.nextInt();
                         if(choice12==1||choice12==2)
