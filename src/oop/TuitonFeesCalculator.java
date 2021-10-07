@@ -641,10 +641,22 @@ public class TuitonFeesCalculator {
                                 }
                                 break;
                         }
-                        System.out.println("\n\n");
-
+                    case 2:
+                        System.out.println("1.Diploma in Data Telecommunication & Networking(Coming Soon)");
+                        System.out.println("2.Diploma in Hotel Management(Coming Soon)");
+                        Scanner scc3=new Scanner(System.in);
+                        int choice12=scc3.nextInt();
+                        if(choice12==1||choice12==2)
+                        {
+                            System.out.println("Coming Soon");
+                        }
+                        else
+                        {
+                            System.out.println("Not In The List");
+                        }
 
                 }//program er sesh
+                System.out.println("\n\n");
             }//protom if
             else if(choice==2)
             {
