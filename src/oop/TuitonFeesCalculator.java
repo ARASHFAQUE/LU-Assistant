@@ -641,10 +641,96 @@ public class TuitonFeesCalculator {
                                 }
                                 break;
                         }
+                        System.out.println("\n\n");
 
 
                 }//program er sesh
             }//protom if
+            else if(choice==2)
+            {
+                System.out.println("Select your Desired Program\n");
+                System.out.println("1.M.Sc in CSE");
+                System.out.println("2.MBA");
+                System.out.println("3.LLM");
+                Scanner scc=new Scanner(System.in);
+                int choice10= scc.nextInt();
+
+                if(choice10==1)
+                {
+                    System.out.println("YOUR CGPA (Bachelor)\n");
+                    System.out.println("********************");
+                    System.out.println("| 1) 3.5 or More   |");
+                    System.out.println("| 2) 3.0 or More   |");
+                    System.out.println("********************");
+                    Scanner scc1=new Scanner(System.in);
+                    int choice11= scc1.nextInt();
+                    switch (choice11)
+                    {
+                        case 1:
+                            System.out.println("Thank you for choosing Msc in CSE.Total Cost of the Program is: 1,13,300 ৳.\n"+
+                                    "You will enjoy a total of 15% Waiver on your Tuition fees.\n" +
+                                    "So, Total Cost of your Study is: 1,01,600 ৳");
+                            break;
+                        case 2:
+                            System.out.println("Thank you for choosing Msc in CSE.Total Cost of the Program is: 1,13,300 ৳ .\n"+
+                                    "You will enjoy a total of 10% Waiver on your Tuition fees.\n" +
+                                    "So,Total Cost of your Study is: 1,05,500 ৳");
+
+                    }//switch er brack
+
+                }
+                else if(choice10==2)
+                {
+                    System.out.println("YOUR CGPA (Bachelor)\n");
+                    System.out.println("********************");
+                    System.out.println("| 1) 3.5 or More   |");
+                    System.out.println("| 2) 3.0 or More   |");
+                    System.out.println("********************");
+                    Scanner scc1=new Scanner(System.in);
+                    int choice11= scc1.nextInt();
+                    switch (choice11)
+                    {
+                        case 1:
+                            System.out.println("Thank you for choosing MBA.Total Cost of the Program is: 1,33,700 ৳.\n"+
+                                    "You will enjoy a total of 15% Waiver on your Tuition fees.\n" +
+                                    "So, Total Cost of your Study is: 1,19,525 ৳");
+                            break;
+                        case 2:
+                            System.out.println("Thank you for choosing MBA.Total Cost of the Program is: 1,33,700 ৳.\n"+
+                                    "You will enjoy a total of 10% Waiver on your Tuition fees.\n" +
+                                    "So,Total Cost of your Study is: 1,24,250 ৳");
+
+                    }//switch er brack
+                }
+                else if(choice10==3)
+                {
+                    System.out.println("YOUR CGPA (Bachelor)\n");
+                    System.out.println("********************");
+                    System.out.println("| 1) 3.5 or More   |");
+                    System.out.println("| 2) 3.0 or More   |");
+                    System.out.println("********************");
+                    Scanner scc1=new Scanner(System.in);
+                    int choice11= scc1.nextInt();
+                    switch (choice11)
+                    {
+                        case 1:
+                            System.out.println("Thank you for choosing LLM(Law).Total Cost of the Program is: 86,200 ৳.\n"+
+                                    "You will enjoy a total of 15% Waiver on your Tuition fees.\n" +
+                                    "So, Total Cost of your Study is: 77,200 ৳");
+                            break;
+                        case 2:
+                            System.out.println("Thank you for choosing LLM(Law).Total Cost of the Program is: 86,200 ৳ .\n"+
+                                    "You will enjoy a total of 10% Waiver on your Tuition fees.\n" +
+                                    "So,Total Cost of your Study is: 80,200 ৳");
+
+                    }//switch er brack
+                }
+                else
+                {
+                    System.out.println("Not in The List\n\n");
+                }
+                System.out.println("\nTHANK YOU\n\n");
+            }//else if er bracket
         }
     }//while er brak
 
