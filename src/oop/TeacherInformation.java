@@ -131,7 +131,7 @@ public class TeacherInformation {
             }
 
         }catch (Exception e){
-
+            System.out.println("File not found!!!");
         }
 
     }
@@ -182,7 +182,7 @@ public class TeacherInformation {
             }
 
         }catch (Exception e){
-
+            System.out.println("File not found!!!");
         }
 
     }
@@ -232,63 +232,63 @@ public class TeacherInformation {
                 }
             }
 
-                if(found)
-                {
-                    System.out.println("************* Please choose an option *************");
-                    System.out.println("*************What do you wanna update?*************");
-                    System.out.println("1. Name");
-                    System.out.println("2. Faculty");
-                    System.out.println("3. Position");
-                    System.out.println("4. Number");
-                    System.out.println("5. Vaccine Status");
-                    System.out.println("Please choose any option you like: ");
+            if(found)
+            {
+                System.out.println("************* Please choose an option *************");
+                System.out.println("*************What do you wanna update?*************");
+                System.out.println("1. Name");
+                System.out.println("2. Faculty");
+                System.out.println("3. Position");
+                System.out.println("4. Number");
+                System.out.println("5. Vaccine Status");
+                System.out.println("Please choose any option you like: ");
 
-                    int choice = input.nextInt();
-                    System.out.print("\n");
-                    switch (choice) {
-                        case 1:
-                            System.out.println("Enter the updated Name: ");
-                            name = input.next();
-                            break;
-                        case 2:
-                            System.out.println("Enter the updated Faculty: ");
-                            faculty = input.next();
-                            break;
-                        case 3:
-                            System.out.println("Enter the updated Position: ");
-                            position = input.next();
-                            break;
-                        case 4:
-                            System.out.println("Enter the updated Number: ");
-                            number = input.next();
-                            break;
-                        case 5:
-                            System.out.println("Enter the updated Vaccine status: ");
-                            vaccine = input.next();
-                            break;
-                    }
-
-                    str2 = name+" "+faculty+" "+position+" "+number+" "+mail+" "+vaccine;
-
-                    inputStr = inputStr.replace(str1, str2);
-                    try (FileOutputStream fileOut = new FileOutputStream(file4)) {
-                        fileOut.write(inputStr.getBytes());
-                        fileOut.close();
-                    }
-
-                    System.out.println("Teacher Information Updated.\n");
+                int choice = input.nextInt();
+                System.out.print("\n");
+                switch (choice) {
+                    case 1:
+                        System.out.println("Enter the updated Name: ");
+                        name = input.next();
+                        break;
+                    case 2:
+                        System.out.println("Enter the updated Faculty: ");
+                        faculty = input.next();
+                        break;
+                    case 3:
+                        System.out.println("Enter the updated Position: ");
+                        position = input.next();
+                        break;
+                    case 4:
+                        System.out.println("Enter the updated Number: ");
+                        number = input.next();
+                        break;
+                    case 5:
+                        System.out.println("Enter the updated Vaccine status: ");
+                        vaccine = input.next();
+                        break;
                 }
-                else
-                {
-                    System.out.println("Invalid Number. Please Try again.......\n");
-                    updateTeacherInformation();
+
+                str2 = name+" "+faculty+" "+position+" "+number+" "+mail+" "+vaccine;
+
+                inputStr = inputStr.replace(str1, str2);
+                try (FileOutputStream fileOut = new FileOutputStream(file4)) {
+                    fileOut.write(inputStr.getBytes());
+                    fileOut.close();
                 }
+
+                System.out.println("Teacher Information Updated.\n");
+            }
+            else
+            {
+                System.out.println("Invalid Number. Please Try again.......\n");
+                updateTeacherInformation();
+            }
 
 
 
 
         }catch (Exception e){
-
+            System.out.println("File not found!!!");
         }
     }
 
@@ -337,38 +337,37 @@ public class TeacherInformation {
                 }
             }
 
-                if(found)
-                {
-                    name = " ";
-                    faculty = " ";
-                    position = " ";
-                    number = " ";
-                    mail = " ";
-                    vaccine = " ";
+            if(found)
+            {
+                name = " ";
+                faculty = " ";
+                position = " ";
+                number = " ";
+                mail = " ";
+                vaccine = " ";
 
-                    str2 = name+" "+faculty+" "+position+" "+number+" "+mail+" "+vaccine;
+                str2 = name+" "+faculty+" "+position+" "+number+" "+mail+" "+vaccine;
 
-                    inputStr = inputStr.replace(str1, str2);
-                    try (FileOutputStream fileOut = new FileOutputStream(file4)) {
-                        fileOut.write(inputStr.getBytes());
-                        fileOut.close();
-                    }
-
-                    System.out.println("Teacher Information Deleted.\n");
+                inputStr = inputStr.replace(str1, str2);
+                try (FileOutputStream fileOut = new FileOutputStream(file4)) {
+                    fileOut.write(inputStr.getBytes());
+                    fileOut.close();
                 }
-                else
-                {
-                    System.out.println("Invalid Number. Please Try again.......\n");
-                    deleteTeacherInformation();
-                }
+
+                System.out.println("Teacher Information Deleted.\n");
+            }
+            else
+            {
+                System.out.println("Invalid Number. Please Try again.......\n");
+                deleteTeacherInformation();
+            }
 
 
 
         }catch (Exception e){
-
+            System.out.println("File not found!!!");
         }
     }
 
 
 }
-
