@@ -1,7 +1,8 @@
 package oop;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.io.*;
 
 public class StudentChoice {
     // After signing in this page occurs which provides students to access information they want
@@ -121,7 +122,9 @@ public class StudentChoice {
                             libraryTime.libraryTime();
                             break;
                         case 4:
-                            LibraryInformation libraryContact = new LibraryInformation();
+                            Librarian librarian = new Librarian("Librarian",250);
+                            SectionOfficer sectionOfficer = new SectionOfficer("Section Officer","so.libray@lus.ac.bd",251);
+                            LibraryContact libraryContact = new LibraryContact(librarian,sectionOfficer,"librarian@lus.ac.bd");
                             libraryContact.libraryContact();
                             break;
                     }
