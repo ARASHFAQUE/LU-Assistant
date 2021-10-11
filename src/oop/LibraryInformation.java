@@ -153,15 +153,5 @@ public class LibraryInformation {
         System.out.println("\nSunday to Friday: 9.00 am to 5.00 pm\nSaturday: 11.00 am to 5.00 pm\nNB: Check-out time from the library is 15 minutes prior to the library closes.\n");
     }
 
-    /**
-     * This function provide Contact Information of Librarian and Section Officer.
-     */
-
-    void libraryContact()
-    {
-        System.out.println("\nLibrarian\nEmail: librarian@lus.ac.bd\nExt: 250\n");
-        System.out.println("Section Officer\nEmail: so.libray@lus.ac.bd\nExt: 251\n");
-    }
-
 
 }
