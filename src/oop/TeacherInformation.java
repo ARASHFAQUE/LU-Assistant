@@ -3,14 +3,22 @@ package oop;
 import java.io.*;
 import java.util.*;
 
+/**
+ * This class is Teacher information class.
+ */
 public class TeacherInformation {
+
+    int numberOfTeacher;
+
+    /**
+     * This function is used to add information of newly enrolled Teacher at Leading University.
+     */
     void addTeacherInformation()
     {
-        int numberOfTeacher;
+
         String teacherName = "", teacherFaculty = "", teacherPosition = "", teacherNumber = "", teacherMail = "", tVaccine="" , name = "", faculty = "", position = "", number = "", mail = "", vaccine="";
         try {
             File dir = new File("Files");
-            //dir.mkdir();
             String path = dir.getAbsolutePath();
             File file4 = new File(path + "/teacherInfo.txt");
 
@@ -78,121 +86,15 @@ public class TeacherInformation {
         }
     }
 
-    void searchTeacherInformation()
-    {
-        String teacherFaculty, name, faculty, position, number, mail, vaccine;
-        try{
-            File dir = new File("Files");
-            //dir.mkdir();
-            String path = dir.getAbsolutePath();
-            File file4 = new File(path + "/teacherInfo.txt");
-
-            Scanner scanner = new Scanner(file4);
-            Scanner input = new Scanner(System.in);
-
-            System.out.print("Enter the Faculty: ");
-            teacherFaculty = input.next();
-            System.out.print("\n");
-
-            boolean found = false;
-
-            while(scanner.hasNext())
-            {
-                name = scanner.next();
-                faculty = scanner.next();
-                position = scanner.next();
-                number = scanner.next();
-                mail = scanner.next();
-                vaccine = scanner.next();
-                if (teacherFaculty.equalsIgnoreCase(faculty))
-                {
-                    StringBuilder teacherNameWithSpace = new StringBuilder();
-                    teacherNameWithSpace.append(name.charAt(0));
-                    for (int i = 1; i < name.length(); i++)
-                    {
-                        char ch = name.charAt(i);
-                        if(Character.isUpperCase(ch))
-                        {
-                            teacherNameWithSpace.append(" ");
-                        }
-                        teacherNameWithSpace.append(ch);
-                    }
-
-                    String str = "Teacher Name: "+teacherNameWithSpace+"\n"+"Faculty: "+faculty+"\n"+"Position: "+position+"\n"+"Number: "+number+"\n"+"E-mail: "+mail+"\n"+"Is Vaccinated? "+vaccine+"\n";
-                    System.out.println(str);
-                    found=true;
-
-                }
-            }
-
-            if(!found)
-            {
-                System.out.println("Record not found. Please try again....\n");
-            }
-
-        }catch (Exception e){
-            System.out.println("File not found!!!");
-        }
-
-    }
-
-    void displayTeacherInformation()
-    {
-        String teacherFaculty, name, faculty, position, number, mail, vaccine;
-        try{
-            File dir = new File("Files");
-            //dir.mkdir();
-            String path = dir.getAbsolutePath();
-            File file4 = new File(path + "/teacherInfo.txt");
-
-            Scanner scanner = new Scanner(file4);
-            Scanner input = new Scanner(System.in);
-
-            boolean found = false;
-
-            while(scanner.hasNext())
-            {
-                name = scanner.next();
-                faculty = scanner.next();
-                position = scanner.next();
-                number = scanner.next();
-                mail = scanner.next();
-                vaccine = scanner.next();
-
-                StringBuilder teacherNameWithSpace = new StringBuilder();
-                teacherNameWithSpace.append(name.charAt(0));
-                for (int i = 1; i < name.length(); i++) {
-                    char ch = name.charAt(i);
-                    if (Character.isUpperCase(ch)) {
-                        teacherNameWithSpace.append(" ");
-                    }
-                    teacherNameWithSpace.append(ch);
-                }
-                System.out.print("\n");
-                String str = "Teacher Name: "+teacherNameWithSpace+"\n"+"Faculty: "+faculty+"\n"+"Position: "+position+"\n"+"Number: "+number+"\n"+"E-mail: "+mail+"\n"+"Is Vaccinated? "+vaccine;
-                System.out.println(str);
-                found=true;
-
-            }
-
-
-            if(found)
-            {
-                System.out.println("\nDisplay Successfully.\n");
-            }
-
-        }catch (Exception e){
-            System.out.println("File not found!!!");
-        }
-
-    }
+    /**
+     * This function allows me to update information about Teacher by searching through Email.
+     */
 
     void updateTeacherInformation()
     {
         String name="", faculty="", position="", number="", mail="", vaccine="",str1="",str2="";
         try{
             File dir = new File("Files");
-            //dir.mkdir();
             String path = dir.getAbsolutePath();
             File file4 = new File(path + "/teacherInfo.txt");
 
@@ -292,12 +194,15 @@ public class TeacherInformation {
         }
     }
 
+    /**
+     * This function allows me to Delete information about Teacher by searching through Email.
+     */
+
     void deleteTeacherInformation()
     {
         String name="", faculty="", position="", number="", mail="", vaccine="",str1="",str2="";
         try{
             File dir = new File("Files");
-            //dir.mkdir();
             String path = dir.getAbsolutePath();
             File file4 = new File(path + "/teacherInfo.txt");
 
@@ -370,4 +275,134 @@ public class TeacherInformation {
     }
 
 
+}
+
+/**
+ * This class is sub class of TeacherInformation class.
+ * This class is parent class of DisplayTeacherInfo class.
+ * The Method Overriding in Polymorphism concept is used here.
+ */
+
+class SearchTeacherInfo{
+
+    /**
+     * This function allows me to find information about Teacher by searching through Faculty.
+     */
+    void SearchOrDisplayTeacherInfo()
+    {
+        String teacherFaculty, name, faculty, position, number, mail, vaccine;
+        try{
+            File dir = new File("Files");
+            String path = dir.getAbsolutePath();
+            File file4 = new File(path + "/teacherInfo.txt");
+
+            Scanner scanner = new Scanner(file4);
+            Scanner input = new Scanner(System.in);
+
+            System.out.print("Enter the Faculty: ");
+            teacherFaculty = input.next();
+            System.out.print("\n");
+
+            boolean found = false;
+
+            while(scanner.hasNext())
+            {
+                name = scanner.next();
+                faculty = scanner.next();
+                position = scanner.next();
+                number = scanner.next();
+                mail = scanner.next();
+                vaccine = scanner.next();
+                if (teacherFaculty.equalsIgnoreCase(faculty))
+                {
+                    StringBuilder teacherNameWithSpace = new StringBuilder();
+                    teacherNameWithSpace.append(name.charAt(0));
+                    for (int i = 1; i < name.length(); i++)
+                    {
+                        char ch = name.charAt(i);
+                        if(Character.isUpperCase(ch))
+                        {
+                            teacherNameWithSpace.append(" ");
+                        }
+                        teacherNameWithSpace.append(ch);
+                    }
+
+                    String str = "Teacher Name: "+teacherNameWithSpace+"\n"+"Faculty: "+faculty+"\n"+"Position: "+position+"\n"+"Number: "+number+"\n"+"E-mail: "+mail+"\n"+"Is Vaccinated? "+vaccine+"\n";
+                    System.out.println(str);
+                    found=true;
+
+                }
+            }
+
+            if(!found)
+            {
+                System.out.println("Record not found. Please try again....\n");
+            }
+
+        }catch (Exception e){
+            System.out.println("Can't read file!!!");
+        }
+
+    }
+}
+
+/**
+ *This class is Child class of SearchTeacherInfo class.
+ */
+class DisplayTeacherInfo extends SearchTeacherInfo{
+
+    /**
+     * This function allows me to display the all Teacher information.
+     */
+
+    @Override
+    void SearchOrDisplayTeacherInfo()
+    {
+        String teacherFaculty, name, faculty, position, number, mail, vaccine;
+        try{
+            File dir = new File("Files");
+            String path = dir.getAbsolutePath();
+            File file4 = new File(path + "/teacherInfo.txt");
+
+            Scanner scanner = new Scanner(file4);
+            Scanner input = new Scanner(System.in);
+
+            boolean found = false;
+
+            while(scanner.hasNext())
+            {
+                name = scanner.next();
+                faculty = scanner.next();
+                position = scanner.next();
+                number = scanner.next();
+                mail = scanner.next();
+                vaccine = scanner.next();
+
+                StringBuilder teacherNameWithSpace = new StringBuilder();
+                teacherNameWithSpace.append(name.charAt(0));
+                for (int i = 1; i < name.length(); i++) {
+                    char ch = name.charAt(i);
+                    if (Character.isUpperCase(ch)) {
+                        teacherNameWithSpace.append(" ");
+                    }
+                    teacherNameWithSpace.append(ch);
+                }
+                System.out.print("\n");
+                String str = "Teacher Name: "+teacherNameWithSpace+"\n"+"Faculty: "+faculty+"\n"+"Position: "+position+"\n"+"Number: "+number+"\n"+"E-mail: "+mail+"\n"+"Is Vaccinated? "+vaccine;
+                System.out.println(str);
+                found=true;
+
+            }
+
+
+            if(found)
+            {
+                System.out.println("\nDisplay Successfully.\n");
+            }
+
+        }catch (Exception e){
+            System.out.println("Can't read file!!!");
+        }
+
+    }
 }
