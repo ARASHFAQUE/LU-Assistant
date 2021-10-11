@@ -1,7 +1,5 @@
 package oop;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class StudentChoice {
@@ -44,12 +42,12 @@ public class StudentChoice {
 
                     switch (choice) {
                         case 1:
-                            TeacherInformation searchTeacherInformation = new TeacherInformation();
-                            searchTeacherInformation.searchTeacherInformation();
+                            SearchTeacherInfo searchTeacherInformation = new SearchTeacherInfo();
+                            searchTeacherInformation.SearchOrDisplayTeacherInfo();
                             break;
                         case 2:
-                            TeacherInformation displayTeacherInformation = new TeacherInformation();
-                            displayTeacherInformation.displayTeacherInformation();
+                            SearchTeacherInfo displayTeacherInformation = new DisplayTeacherInfo();
+                            displayTeacherInformation.SearchOrDisplayTeacherInfo();
                             break;
                         }
                     break;
