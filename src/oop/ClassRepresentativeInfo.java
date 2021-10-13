@@ -3,12 +3,9 @@ package oop;
 import java.io.*;
 import java.util.Scanner;
 
-/**
- * Interface
- * Interface method (does not have a body)
- */
-
+// Interface
 interface CRInfo{
+    // Interface method (does not have a body)
     public void addClassRepresentative();
     public void searchClassRepresentative();
     public void displayClassRepresentative();
