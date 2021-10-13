@@ -146,6 +146,7 @@ public class AdminPanel {
 
                             System.out.print("Enter any option you like: ");
                             choice = input.nextInt();
+                            DeleteBook deleteBook = new DeleteBook();
                             switch (choice)
                             {
                                 case 1:
@@ -153,6 +154,11 @@ public class AdminPanel {
                                     addBookInformation.addBookInformation();
                                     break;
                                 case 2:
+                                    deleteBook.updateBookInformation();
+                                    break;
+                                case 3:
+                                    deleteBook.deleteBookInformation();
+
                             }
                             break;
                         case 6:
