@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class DeleteStudentInformation {
+    // This function allows me to delete information about Student by searching id.
     void deleteStudentInformation()
     {
         String id = "", name = "", birthDate = "", section = "", cgpa = "", payment = "", vaccine = "", str1 = "", str2 = "";
