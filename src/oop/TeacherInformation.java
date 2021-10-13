@@ -90,7 +90,7 @@ public class TeacherInformation {
      * This function allows me to update information about Teacher by searching through Email.
      */
 
-    void updateTeacherInformation()
+    static void updateTeacherInformation()
     {
         String name="", faculty="", position="", number="", mail="", vaccine="",str1="",str2="";
         try{
@@ -198,7 +198,7 @@ public class TeacherInformation {
      * This function allows me to Delete information about Teacher by searching through Email.
      */
 
-    void deleteTeacherInformation()
+    static void deleteTeacherInformation()
     {
         String name="", faculty="", position="", number="", mail="", vaccine="",str1="",str2="";
         try{
