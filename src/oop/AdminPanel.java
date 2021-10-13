@@ -88,12 +88,10 @@ public class AdminPanel {
                                     addTeacherInformation.addTeacherInformation();
                                     break;
                                 case 2:
-                                    TeacherInformation updateTeacherInformation = new TeacherInformation();
-                                    updateTeacherInformation.updateTeacherInformation();
+                                    TeacherInformation.updateTeacherInformation();
                                     break;
                                 case 3:
-                                    TeacherInformation deleteTeacherInformation = new TeacherInformation();
-                                    deleteTeacherInformation.deleteTeacherInformation();
+                                    TeacherInformation.deleteTeacherInformation();
                                     break;
                             }
                             break;
@@ -105,20 +103,18 @@ public class AdminPanel {
 
                             System.out.print("Enter any option you like: ");
                             choice = input.nextInt();
+                            ClassRepresentativeInfo classRepresentativeInfo = new ClassRepresentativeInfo();
 
                             switch (choice)
                             {
                                 case 1:
-                                    ClassRepresentativeInformation addClassRepresentativeInformation = new ClassRepresentativeInformation();
-                                    addClassRepresentativeInformation.addClassRepresentativeInformation();
+                                    classRepresentativeInfo.addClassRepresentative();
                                     break;
                                 case 2:
-                                    ClassRepresentativeInformation updateClassRepresentativeInformation = new ClassRepresentativeInformation();
-                                    updateClassRepresentativeInformation.updateClassRepresentative();
+                                    classRepresentativeInfo.updateClassRepresentative();
                                     break;
                                 case 3:
-                                    ClassRepresentativeInformation deleteClassRepresentativeInformation = new ClassRepresentativeInformation();
-                                    deleteClassRepresentativeInformation.deleteClassRepresentative();
+                                    classRepresentativeInfo.deleteClassRepresentative();
                                     break;
                             }
                             break;
@@ -153,9 +149,10 @@ public class AdminPanel {
                             switch (choice)
                             {
                                 case 1:
-                                    LibraryInformation addBookInfo = new LibraryInformation();
-                                    addBookInfo.addBookInformation();
+                                    LibraryInformation addBookInformation = new LibraryInformation();
+                                    addBookInformation.addBookInformation();
                                     break;
+                                case 2:
                             }
                             break;
                         case 6:
