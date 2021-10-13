@@ -115,7 +115,7 @@ public class StudentChoice {
                             }
                             break;
                         case 3:
-                            LibraryInformation libraryTime = new LibraryInformation();
+                            LibraryTime libraryTime = new LibraryTime();
                             libraryTime.libraryTime();
                             break;
                         case 4:
