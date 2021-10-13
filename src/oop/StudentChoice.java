@@ -59,15 +59,14 @@ public class StudentChoice {
                     System.out.print("Enter any option you like: ");
 
                     choice = input.nextInt();
+                    ClassRepresentativeInfo classRepresentativeInfo = new ClassRepresentativeInfo();
 
                     switch (choice) {
                         case 1:
-                            ClassRepresentativeInformation searchClassRepresentativeInformation = new ClassRepresentativeInformation();
-                            searchClassRepresentativeInformation.searchClassRepresentative();
+                            classRepresentativeInfo.searchClassRepresentative();
                             break;
                         case 2:
-                            ClassRepresentativeInformation displayClassRepresentativeInformation = new ClassRepresentativeInformation();
-                            displayClassRepresentativeInformation.displayClassRepresentative();
+                            classRepresentativeInfo.displayClassRepresentative();
                             break;
                     }
                     break;
@@ -106,13 +105,13 @@ public class StudentChoice {
                             switch (choice)
                             {
                                 case 1:
-                                    LibraryInformation searchLibraryInformation = new LibraryInformation();
-                                    searchLibraryInformation.searchBookInformation();
+                                    LibraryInformation searchBookInformation = new LibraryInformation();
+                                    searchBookInformation.searchBookInformation();
                                     break;
                                 case 2:
-                                    /*LibraryInformation addLibraryInformation = new LibraryInformation();
-                                    addLibraryInformation.addBookInformation();
-                                    break;*/
+                                    LibraryInformation displayBookInformation = new LibraryInformation();
+                                    displayBookInformation.displayBookInformation();
+                                    break;
                             }
                             break;
                         case 3:
