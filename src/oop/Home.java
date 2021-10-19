@@ -15,7 +15,8 @@ public class Home extends AdminPanel{
             System.out.println("2. Sign In As Student");
             System.out.println("3. Forget Password");
             System.out.println("4. Sign In As Admin");
-            System.out.println("5. Exit");
+            System.out.println("5. Admission Information");
+            System.out.println("6. Exit");
 
             System.out.print("Enter any option you like: ");
             Scanner input = new Scanner(System.in);
@@ -39,9 +40,14 @@ public class Home extends AdminPanel{
                     adminPanel.controlServer();
                     break;
                 case 5:
+                    TuitonFeesCalculator tuitonFeesCalculator = new TuitonFeesCalculator();
+                    tuitonFeesCalculator.feeCalculator();
+                    break;
+                case 6:
                     System.out.println("Application Exited.");
                     System.exit(0);
                     break;
+
                 default:
                     System.out.println("Invalid Choice.");
                     startOfEverything();
