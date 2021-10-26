@@ -745,6 +745,12 @@ public class TuitonFeesCalculator {
                 }
                 System.out.println("\nTHANK YOU\n\n");
             }//else if er bracket
+            else//new new new
+            {
+                System.out.println("Invalid Choice!");
+                Home home = new Home();
+                home.startOfEverything();
+            }
         }
     }//while er brak
 
