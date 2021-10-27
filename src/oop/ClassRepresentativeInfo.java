@@ -25,7 +25,7 @@ public class ClassRepresentativeInfo implements CRInfo {
     public void addClassRepresentative() {
         int numberOfClassRep;
 
-        String crName = "", crID = "", crBatch = "", crSection = "", crNumber = "", crMail = "", name = "", id = "", batch = "", section = "", number = "", mail = "";
+        String crName = "", crID = "",crDept = "", crBatch = "", crSection = "", crNumber = "", crMail = "", name = "", id = "", dept = "", batch = "", section = "", number = "", mail = "";
         try {
             File dir = new File("Files");
             String path = dir.getAbsolutePath();
@@ -48,6 +48,9 @@ public class ClassRepresentativeInfo implements CRInfo {
                 System.out.print("Enter the CR ID: ");
                 crID = input.next();
 
+                System.out.print("Enter the CR Dept: ");
+                crDept = input.next();
+
                 System.out.print("Enter the CR Batch: ");
                 crBatch = input.next();
 
@@ -64,6 +67,7 @@ public class ClassRepresentativeInfo implements CRInfo {
                 while (scanner.hasNext()) {
                     name = scanner.next();
                     id = scanner.next();
+                    dept = scanner.next();
                     batch = scanner.next();
                     section = scanner.next();
                     number = scanner.next();
@@ -79,7 +83,7 @@ public class ClassRepresentativeInfo implements CRInfo {
                     System.out.println("This information already exists. Please try again......");
                     i--;
                 } else {
-                    String str = crName + " " + crID + " " + crBatch + " " + crSection + " " + crNumber + " " + crMail;
+                    String str = crName + " " + crID + " " + crDept + " " + crBatch + " " + crSection + " " + crNumber + " " + crMail;
                     try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file5, true)))) {
                         pw.println(str);
                     }
@@ -101,7 +105,7 @@ public class ClassRepresentativeInfo implements CRInfo {
 
     public void searchClassRepresentative()
     {
-        String crBatch = "", crSection = "", name = "", id = "", batch = "", section = "", number = "", mail = "";
+        String crDept = "", crBatch = "", crSection = "", name = "", id = "", dept, batch = "", section = "", number = "", mail = "";
         try {
             File dir = new File("Files");
             String path = dir.getAbsolutePath();
@@ -109,6 +113,9 @@ public class ClassRepresentativeInfo implements CRInfo {
 
             Scanner scanner = new Scanner(file5);
             Scanner input = new Scanner(System.in);
+
+            System.out.print("Enter the CR Dept: ");
+            crDept = input.next();
 
             System.out.print("Enter the CR Batch: ");
             crBatch = input.next();
@@ -122,12 +129,13 @@ public class ClassRepresentativeInfo implements CRInfo {
             while (scanner.hasNext()) {
                 name = scanner.next();
                 id = scanner.next();
+                dept = scanner.next();
                 batch = scanner.next();
                 section = scanner.next();
                 number = scanner.next();
                 mail = scanner.next();
 
-                if (batch.equals(crBatch) && section.equalsIgnoreCase(crSection)) {
+                if (dept.equalsIgnoreCase(crDept) && batch.equals(crBatch) && section.equalsIgnoreCase(crSection)) {
 
                     StringBuilder crNameWithSpace = new StringBuilder();
                     crNameWithSpace.append(name.charAt(0));
@@ -164,7 +172,7 @@ public class ClassRepresentativeInfo implements CRInfo {
      */
 
     public void displayClassRepresentative() {
-        String name = "", id = "", batch = "", section = "", number = "", mail = "";
+        String name = "", id = "",dept = "", batch = "", section = "", number = "", mail = "";
         try {
             File dir = new File("Files");
             String path = dir.getAbsolutePath();
@@ -178,6 +186,7 @@ public class ClassRepresentativeInfo implements CRInfo {
             while (scanner.hasNext()) {
                 name = scanner.next();
                 id = scanner.next();
+                dept = scanner.next();
                 batch = scanner.next();
                 section = scanner.next();
                 number = scanner.next();
@@ -193,7 +202,7 @@ public class ClassRepresentativeInfo implements CRInfo {
                     crNameWithSpace.append(ch);
                 }
 
-                String str = "\nCR Name: " + crNameWithSpace + "\n" + "CR ID: " + id + "\n"+ "Batch: "+ batch+ "\n"+ "Section: " +section+ "\n" + "Number: " + number + "\n" + "E-mail: " + mail + "\n";
+                String str = "\nCR Name: " + crNameWithSpace + "\n" + "CR ID: " + id + "\n"+ "Department: "+ dept + "\n" +"Batch: "+ batch+ "\n"+ "Section: " +section+ "\n" + "Number: " + number + "\n" + "E-mail: " + mail + "\n";
                 System.out.println(str);
                 exists = true;
             }
@@ -215,7 +224,7 @@ public class ClassRepresentativeInfo implements CRInfo {
      */
 
     public void updateClassRepresentative() {
-        String name = "", id = "", batch = "", section = "", number = "", mail = "", str1 = "", str2 = "";
+        String name = "", id = "", dept = "", batch = "", section = "", number = "", mail = "", str1 = "", str2 = "";
         try {
             File dir = new File("Files");
             String path = dir.getAbsolutePath();
@@ -245,13 +254,14 @@ public class ClassRepresentativeInfo implements CRInfo {
             while (scanner.hasNext()) {
                 name = scanner.next();
                 id = scanner.next();
+                dept = scanner.next();
                 batch = scanner.next();
                 section = scanner.next();
                 number = scanner.next();
                 mail = scanner.next();
 
                 if (id.equals(newID)) {
-                    str1 = name + " " + id + " " + batch + " " + section + " " + number + " " + mail;
+                    str1 = name + " " + id + " " + dept + " " + batch + " " + section + " " + number + " " + mail;
                     found = true;
                     break;
                 }
@@ -263,9 +273,10 @@ public class ClassRepresentativeInfo implements CRInfo {
                 System.out.println("1. Name");
                 System.out.println("2. ID");
                 System.out.println("3. Batch");
-                System.out.println("4. Section");
-                System.out.println("5. Number");
-                System.out.println("6. E-mail");
+                System.out.println("4. Department");
+                System.out.println("5. Section");
+                System.out.println("6. Number");
+                System.out.println("7. E-mail");
                 System.out.println("Please choose any option you like: ");
 
                 int choice = input.nextInt();
@@ -284,20 +295,23 @@ public class ClassRepresentativeInfo implements CRInfo {
                         batch = input.next();
                         break;
                     case 4:
+                        System.out.println("Enter the updated Dept: ");
+                        dept = input.next();
+                    case 5:
                         System.out.println("Enter the updated Section: ");
                         section = input.next();
                         break;
-                    case 5:
+                    case 6:
                         System.out.println("Enter the updated Number: ");
                         number = input.next();
                         break;
-                    case 6:
+                    case 7:
                         System.out.println("Enter the updated E-mail: ");
                         mail = input.next();
                         break;
                 }
 
-                str2 = name + " " + id + " " + batch + " " + section + " " + number + " " + mail;
+                str2 = name + " " + id + " " + dept + " " + batch + " " + section + " " + number + " " + mail;
 
                 inputStr = inputStr.replace(str1, str2);
                 try (FileOutputStream fileOut = new FileOutputStream(file5)) {
@@ -324,7 +338,7 @@ public class ClassRepresentativeInfo implements CRInfo {
      */
 
     public void deleteClassRepresentative() {
-        String name = "", id = "", batch = "", section = "", number = "", mail = "", str1 = "", str2 = "";
+        String name = "", id = "", dept = "", batch = "", section = "", number = "", mail = "", str1 = "", str2 = "";
         try {
             File dir = new File("Files");
             String path = dir.getAbsolutePath();
@@ -354,13 +368,14 @@ public class ClassRepresentativeInfo implements CRInfo {
             while (scanner.hasNext()) {
                 name = scanner.next();
                 id = scanner.next();
+                dept = scanner.next();
                 batch = scanner.next();
                 section = scanner.next();
                 number = scanner.next();
                 mail = scanner.next();
 
                 if (id.equals(newID)) {
-                    str1 = name + " " + id + " " + batch + " " + section + " " + number + " " + mail;
+                    str1 = name + " " + id + " " + dept + " " + batch + " " + section + " " + number + " " + mail;
                     found = true;
                     break;
                 }
@@ -369,12 +384,13 @@ public class ClassRepresentativeInfo implements CRInfo {
             if (found) {
                 name = " ";
                 id = " ";
+                dept = " ";
                 batch = " ";
                 section = " ";
                 number = " ";
                 mail = " ";
 
-                str2 = name + " " + id + " " + batch + " " + section + " " + number + " " + mail;
+                str2 = name + " " + id + " " + dept + " " + batch + " " + section + " " + number + " " + mail;
 
                 inputStr = inputStr.replace(str1, str2);
                 try (FileOutputStream fileOut = new FileOutputStream(file5)) {
